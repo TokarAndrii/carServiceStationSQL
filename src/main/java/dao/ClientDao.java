@@ -1,0 +1,24 @@
+package dao;
+
+import exeption.NoClientFoundException;
+import model.Client;
+
+import java.util.List;
+
+public interface ClientDao {
+
+    Client create(Client client);
+
+    Client update(String email, String pass, String driverLicenseNumber,
+                  String phoneNumber, long id);
+
+    List<Client> findAll();
+
+    Client findById(long id) throws NoClientFoundException;
+
+    Client findByDriverLicenseNumber(String driverLicenseNumber) throws NoClientFoundException;
+
+    boolean delete(Client client);
+
+    Client findByEmail(String email) throws NoClientFoundException;
+}
