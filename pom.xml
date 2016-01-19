@@ -7,7 +7,7 @@
     <groupId>stationCarTokar</groupId>
     <artifactId>Station</artifactId>
     <version>1.0</version>
-    <packaging>pom</packaging>
+    <packaging>war</packaging>
 
 
     <properties>
