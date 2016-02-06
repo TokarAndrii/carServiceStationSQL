@@ -1,28 +1,34 @@
 package dao;
 
 import exeption.NoClientFoundException;
+import exeption.NoWorkerFoundException;
+import model.ServiceForClient;
 import model.Worker;
+import model.WorkerTypes;
 
 import java.util.List;
 
-/**
- * Created by root on 04.09.15.
- */
 public interface WorkerDao {
 
 
     Worker create(Worker worker);
 
-    Worker update(Worker worker);
+    Worker update(String firstName,String secondName,long salary,WorkerTypes workerTypes, long id,String login);
 
     List<Worker> findAll();
 
-    Worker findById(long id) throws NoClientFoundException;
+    Worker findById(long id) throws NoWorkerFoundException;
 
-    Worker findByDriverLicenseNumber(String driverLicenseNumber)
-            throws NoClientFoundException;
+    Worker findByLogin (String login);
+
+    Worker findBySecondName(String workersSecondName)
+            throws NoWorkerFoundException;
 
     boolean delete(Worker worker);
+
+    List<Worker> workersByType(WorkerTypes workerType);
+
+    List<ServiceForClient> findServiceForClientsFromWorker (String workersSecondName);
 
 
 

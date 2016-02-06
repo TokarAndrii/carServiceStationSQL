@@ -30,11 +30,10 @@ public class ClientDaoJPAImpl implements ClientDao {
         EntityTransaction transaction = manager.getTransaction();
 
         try {
-
             transaction.begin();
             manager.persist(client);
             transaction.commit();
-            System.out.println("client made!!!!");
+            System.out.println("client "+client.toString()+" made!!!!");
         } catch (Exception e) {
             transaction.rollback();
         }

@@ -1,6 +1,10 @@
 package model;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+import java.util.List;
 
 @Entity
 @Table(name = "clients")
@@ -16,7 +20,12 @@ public class Client extends IdEntity {
     @Column(nullable = false)
     private String driverLicenseNumber;
 
+    @Column
+    @OneToMany(mappedBy = "client")
+    private List<ServiceForClient> services;
+
     private String pass;
+
 
     public Client() {
     }
@@ -24,7 +33,7 @@ public class Client extends IdEntity {
 
     public Client(String firstName, String secondName,
                   String phoneNumber, String email,
-                  String driverLicenseNumber,String pass) {
+                  String driverLicenseNumber, String pass) {
 
         this.firstName = firstName;
         this.secondName = secondName;
@@ -32,6 +41,14 @@ public class Client extends IdEntity {
         this.email = email;
         this.driverLicenseNumber = driverLicenseNumber;
         this.pass = pass;
+    }
+
+    public List<ServiceForClient> getServices() {
+        return services;
+    }
+
+    public void setServices(List<ServiceForClient> services) {
+        this.services = services;
     }
 
     public String getPass() {
@@ -42,14 +59,9 @@ public class Client extends IdEntity {
         this.pass = pass;
     }
 
-    public void setSecondName(String secondName) {
-        this.secondName = secondName;
-    }
-
     public String getFirstName() {
         return firstName;
     }
-
 
     public void setFirstName(String firstName) {
         this.firstName = firstName;
@@ -57,6 +69,10 @@ public class Client extends IdEntity {
 
     public String getSecondName() {
         return secondName;
+    }
+
+    public void setSecondName(String secondName) {
+        this.secondName = secondName;
     }
 
     public void setSecondtName(String secondtName) {
@@ -85,10 +101,28 @@ public class Client extends IdEntity {
     }
 
     public void setDriverLicenseNumber(String driverLicenseNumber) {
+
         this.driverLicenseNumber = driverLicenseNumber;
     }
 
+    public boolean addService(ServiceForClient serviceForClient) {
+        if (serviceForClient != null) {
+            services.add(serviceForClient);
+            return true;
+        }
+        return false;
+    }
+
+    public boolean removeService(ServiceForClient serviceForClient) {
+        if (services.contains(serviceForClient) && serviceForClient != null) {
+            services.remove(serviceForClient);
+            return true;
+        }
+        return false;
+    }
+
     @Override
+
     public String toString() {
         return "Client{" +
                 "firstName='" + firstName + '\'' +

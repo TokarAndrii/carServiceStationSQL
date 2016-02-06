@@ -12,14 +12,14 @@ public class WorkDairy extends IdEntity {
     @Column
     private Worker workers;
     @Column
-    private ServiceType services;
+    private ServiceForClient services;
     @Column
     private Time timeStartService;
 
     public WorkDairy() {
     }
 
-    public WorkDairy(Client clients, Worker workers, ServiceType services, Time timeStartService) {
+    public WorkDairy(Client clients, Worker workers, ServiceForClient services, Time timeStartService) {
         this.clients = clients;
         this.workers = workers;
         this.services = services;
@@ -34,7 +34,7 @@ public class WorkDairy extends IdEntity {
         return workers;
     }
 
-    public ServiceType getServices() {
+    public ServiceForClient getServices() {
         return services;
     }
 
@@ -51,7 +51,7 @@ public class WorkDairy extends IdEntity {
         this.workers = workers;
     }
 
-    public void setServices(ServiceType services) {
+    public void setServices(ServiceForClient services) {
         this.services = services;
     }
 

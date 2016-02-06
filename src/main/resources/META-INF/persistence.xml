@@ -10,7 +10,12 @@
 
         <class>model.Worker</class>
         <class>model.Client</class>
+        <class>model.Admin</class>
+        <class>model.ServiceForClient</class>
+        <class>model.WorkerTypes</class>
         <class>dao.ClientDaoJPAImpl</class>
+        <class>dao.WorkerDaoJPAImpl</class>
+        <class>dao.ServiceForClientDaoJPAImpl</class>
 
         <properties>
             <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>

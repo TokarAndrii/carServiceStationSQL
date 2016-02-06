@@ -1,29 +1,64 @@
 package model;
 
 import javax.persistence.*;
+import java.util.List;
+//TO DO enum types of workers
 
 @Entity
 @Table(name = "workers")
-public class Worker  extends IdEntity{
+public class Worker  extends IdEntity {
     @Column(nullable = false)
     private String firstName;
+
     @Column(nullable = false)
     private String secondName;
+
     @Column(nullable = false)
     private long salary;
-    private boolean workStatusBusy = true;
+
+    @Column(nullable = false)
+    private String login;
+
+    @Column(nullable = false)
+    private String password;
+
+    @Column(nullable = false)
+    @Enumerated(EnumType.STRING)
+    private WorkerTypes workerTypes;
+
+    @Column
+    @ManyToMany(mappedBy = "workers")
+    private List<ServiceForClient> serviceForClients;
+
+
+
+    //TODO when will create time-table workday calendar - private boolean workStatusBusy = true;
 
     public Worker() {
     }
 
-    public Worker(String firstName, String secondtName,
-                  long salary, boolean workStatusBusy) {
+    public Worker(String firstName, String secondName, long salary, WorkerTypes workerTypes) {
         this.firstName = firstName;
-        this.secondName = secondtName;
+        this.secondName = secondName;
         this.salary = salary;
-        this.workStatusBusy = workStatusBusy;
+        this.workerTypes = workerTypes;
     }
 
+    public String getLogin() {
+        return login;
+    }
+
+    public void setLogin(String login) {
+        this.login = login;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
 
     public String getFirstName() {
         return firstName;
@@ -37,8 +72,8 @@ public class Worker  extends IdEntity{
         return secondName;
     }
 
-    public void setSecondtName(String secondtName) {
-        this.secondName = secondtName;
+    public void setSecondName(String secondName) {
+        this.secondName = secondName;
     }
 
     public long getSalary() {
@@ -49,21 +84,29 @@ public class Worker  extends IdEntity{
         this.salary = salary;
     }
 
-    public boolean isWorkStatusBusy() {
-        return workStatusBusy;
+    public WorkerTypes getWorkerTypes() {
+        return workerTypes;
     }
 
-    public void setWorkStatusBusy(boolean workStatusBusy) {
-        this.workStatusBusy = workStatusBusy;
+    public void setWorkerTypes(WorkerTypes workerTypes) {
+        this.workerTypes = workerTypes;
+    }
+
+    public List<ServiceForClient> getServiceForClients() {
+        return serviceForClients;
+    }
+
+    public void setServiceForClients(List<ServiceForClient> serviceForClients) {
+        this.serviceForClients = serviceForClients;
     }
 
     @Override
     public String toString() {
         return "Worker{" +
                 "firstName='" + firstName + '\'' +
-                ", secondtName='" + secondName + '\'' +
+                ", secondName='" + secondName + '\'' +
                 ", salary=" + salary +
-                ", workStatusBusy=" + workStatusBusy +
+                ", workerTypes=" + workerTypes +
                 '}';
     }
 }

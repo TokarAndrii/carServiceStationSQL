@@ -17,8 +17,13 @@
 
     <filter>
         <filter-name>SessionFilter</filter-name>
-        <filter-class>filter.SessionFilter</filter-class>
+        <filter-class>filter.SessionFilterClient</filter-class>
     </filter>
+
+   <!-- <filter>
+        <filter-name>SessionFilterWorker</filter-name>
+        <filter-class>filter.SessionFilterWorker</filter-class>
+    </filter>-->
 
 
     <filter-mapping>
@@ -29,6 +34,7 @@
     <listener>
          <listener-class>listener.SpringContextListener</listener-class>
      </listener>
+
 
 
 </web-app>

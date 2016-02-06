@@ -3,7 +3,7 @@
 <html>
 <%@include file="WEB-INF/pages/import.jsp" %>
 <head>
-    <title>Register page</title>
+    <title>Register Client page</title>
 </head>
 <body>
 <%@include file="WEB-INF/mainLogoImport.jsp"%>
