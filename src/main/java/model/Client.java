@@ -105,7 +105,7 @@ public class Client extends IdEntity {
         this.driverLicenseNumber = driverLicenseNumber;
     }
 
-    public boolean addService(ServiceForClient serviceForClient) {
+  /*  public boolean addService(ServiceForClient serviceForClient) {
         if (serviceForClient != null) {
             services.add(serviceForClient);
             return true;
@@ -120,7 +120,7 @@ public class Client extends IdEntity {
         }
         return false;
     }
-
+*/
     @Override
 
     public String toString() {

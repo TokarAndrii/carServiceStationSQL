@@ -5,7 +5,7 @@ import model.Client;
 import org.apache.log4j.Logger;
 import org.springframework.context.ApplicationContext;
 import service.ClientServ;
-import service.WorkServImpl;
+/*import service.WorkServImpl;*/
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

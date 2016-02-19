@@ -66,7 +66,7 @@ public class WorkServImpl implements WorkerServ {
     @Override
     public Worker update(String firstName, String secondName,long idOfWorker, long salary,String login,
                          WorkerTypes workerTypes, String loginOfAdmin, String passOfAdmin) {
-        String  acessToken=login(loginOfAdmin,passOfAdmin);
+        String  acessToken=login(loginOfAdmin, passOfAdmin);
         Worker workerFromMap=accessWorkerTokenMap.get(acessToken);
         if (workerFromMap.getWorkerTypes()==WorkerTypes.ADMINISTRATOR) {
 
@@ -128,5 +128,9 @@ public class WorkServImpl implements WorkerServ {
     @Override
     public List<ServiceForClient> getServicesFromWorker(long workerId, String login, String pass) {
         return null;
+    }
+
+    public Worker getWorker(String accessToken){
+       return accessWorkerTokenMap.get(accessToken);
     }
 }

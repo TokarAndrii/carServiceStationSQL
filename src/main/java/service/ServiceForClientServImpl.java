@@ -23,6 +23,7 @@ public class ServiceForClientServImpl implements ServiceForClientServ {
     @Autowired
     private ServiceForClientDaoJPAImpl serviceForClientDaoJPA;
 
+    @Autowired
     private WorkerDao workerDao;
 
     private static final Logger LOGGER = Logger.getLogger(ServiceForClientServImpl.class);
@@ -34,9 +35,9 @@ public class ServiceForClientServImpl implements ServiceForClientServ {
     public ServiceForClientServImpl() {
     }
 
-    public ServiceForClientServImpl(WorkerDao workerDao) {
+    /*public ServiceForClientServImpl(WorkerDao workerDao) {
         this.workerDao = workerDao;
-    }
+    }*/
 
     @Override
     public ServiceForClient orderService(ServiceTypes serviceTypes, Time timeToDo,

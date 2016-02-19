@@ -12,6 +12,7 @@ import java.util.List;
 
 @Component("jpaClientDaoJPA")
 public class ClientDaoJPAImpl implements ClientDao {
+
     @Autowired
     private EntityManagerFactory factory;
 

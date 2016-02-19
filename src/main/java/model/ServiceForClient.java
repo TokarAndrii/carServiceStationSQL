@@ -31,10 +31,10 @@ public class ServiceForClient extends IdEntity {
     private Client client;
 
 
-    @Column
-    @ManyToMany(mappedBy = "services")
-    @JoinTable(name = "clients_workers", joinColumns = @JoinColumn(name = "worker_id"),
-            inverseJoinColumns = @JoinColumn(name = "serviceForClient_id"))
+
+    @ManyToMany
+    @JoinTable(name = "clients_workers", joinColumns = @JoinColumn(name = "worker_id",referencedColumnName = "id"),
+            inverseJoinColumns = @JoinColumn(name = "serviceForClient_id",referencedColumnName = "id"))
     private List<Worker> workers;
 
 
@@ -130,7 +130,6 @@ public class ServiceForClient extends IdEntity {
                 ", startDate=" + startDate +
                 ", finishDate=" + finishDate +
                 ", priceOfService=" + priceOfService +
-                ", client=" + client +
                 '}';
     }
 

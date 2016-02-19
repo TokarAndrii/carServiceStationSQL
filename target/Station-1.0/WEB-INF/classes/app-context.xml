@@ -17,16 +17,19 @@
 
     <context:property-placeholder location="classpath:db.properties"/>
 
-    <context:annotation-config/>
-     <!-- scanning only in model and dao-->
-    <context:component-scan base-package="view"/>
-    <context:component-scan base-package="dao"/>
-    <context:component-scan base-package="service"/>
 
+    <context:annotation-config />
+    <!-- scanning only in model and dao-->
+   <!-- <context:component-scan base-package="view"/>-->
+    <context:component-scan base-package="service"/>
+    <context:component-scan base-package="stationCarTokar"/>
+    <context:component-scan base-package="dao"/>
+    <!--<context:component-scan base-package="service"/>
+-->
 
 
     <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-        <property name="url" value="jdbc:mysql://${db.host}:${db.port}/${db.name}"/>
+        <property name="url" value="jdbc:mysql://${db.host}:${db.port}/stationCarTokar"/>
         <property name="driverClassName" value="${db.driver}"/>
         <property name="username" value="${db.user}"/>
         <property name="password" value="${db.pass}"/>

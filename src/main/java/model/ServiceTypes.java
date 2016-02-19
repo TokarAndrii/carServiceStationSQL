@@ -1,8 +1,6 @@
 package model;
 
-/**
- * Created by tokarAndrii on 23.01.16.
- */
+
 public enum ServiceTypes {
     REPAIR_BODY_CAR, REPAIR_MOTOR, REPAIR_CHASSIS, REPAIR_BRAKE, REPAIR_CLUTCH,    REPAIR_GEARBOX,
     //0               //1           //2             //3  tormoz   //4 sceplenie      //5 kpp

@@ -4,17 +4,25 @@
              xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
                 http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd" version="1.0">
 
-    <persistence-unit name="my-unit">
+    <persistence-unit name="my-unit" transaction-type="RESOURCE_LOCAL">
         <description>My Persistence Unit</description>
         <provider>org.hibernate.ejb.HibernatePersistence</provider>
 
         <class>model.Worker</class>
         <class>model.Client</class>
+        <!--<class>model.Admin</class>-->
+        <class>model.ServiceForClient</class>
+        <!--<class>model.WorkerTypes</class>-->
         <class>dao.ClientDaoJPAImpl</class>
+        <class>dao.WorkerDaoJPAImpl</class>
+        <class>dao.ServiceForClientDaoJPAImpl</class>
+        <!--<class>model.ServiceTypes</class>
+        <class>model.WorkerTypes</class>
+        <class>model.StoreGoodsTypes</class>-->
 
         <properties>
             <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
-            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://127.0.0.1:3306/tokarServiceStation"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://127.0.0.1:3306/stationCarTokar"/>
             <property name="javax.persistence.jdbc.user" value="root"/>
             <property name="javax.persistence.jdbc.password" value="root"/>
 

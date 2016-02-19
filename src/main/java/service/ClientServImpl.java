@@ -1,7 +1,7 @@
 package service;
 
 import dao.ClientDaoJPAImpl;
-import dao.WorkerDao;
+/*import dao.WorkerDao;*/
 import exeption.NoClientFoundException;
 import model.Client;
 import org.apache.log4j.Logger;
@@ -24,7 +24,7 @@ public class ClientServImpl implements ClientServ {
     @Autowired
     private ClientDaoJPAImpl clientDaoJPA;
 
-    private WorkerDao workerDao;
+   /* private WorkerDao workerDao;*/
 
     private Client client;
 
@@ -34,8 +34,8 @@ public class ClientServImpl implements ClientServ {
     public ClientServImpl() {
     }
 
-    public ClientServImpl(WorkerDao workerDao, Validator<Client> clientValidator) {
-        this.workerDao = workerDao;
+    public ClientServImpl(/*WorkerDao workerDao,*/ Validator<Client> clientValidator) {
+        /*this.workerDao = workerDao;*/
         this.clientValidator = clientValidator;
     }
 

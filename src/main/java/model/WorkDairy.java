@@ -1,3 +1,4 @@
+/*
 package model;
 
 
@@ -59,3 +60,4 @@ public class WorkDairy extends IdEntity {
         this.timeStartService = timeStartService;
     }
 }
+*/

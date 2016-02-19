@@ -31,4 +31,6 @@ public interface WorkerServ {
     Worker getWorkerBySecondName(String workerSecondName, String login, String pass);
 
     List<ServiceForClient> getServicesFromWorker (long workerId,String login, String pass);
+    
+    Worker getWorker(String accessToken);
 }

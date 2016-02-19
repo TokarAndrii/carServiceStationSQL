@@ -48,8 +48,9 @@ public class RegisterController extends HttpServlet{
         PrintWriter printWriter = resp.getWriter();
         Worker worker = workerServ.register(firstName,secondName,salary,workerTypes,login,pass);
         LOGGER.info(worker+worker.toString());
-        /*req.getRequestDispatcher("/WEB-INF/pages/clientMenu.jsp").
-                forward(req,resp);*/
+req.getRequestDispatcher("/WEB-INF/pages/clientMenu.jsp").
+                forward(req,resp);
+
 
         printWriter.flush();
 
