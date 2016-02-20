@@ -3,8 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <title>Car Service Station "TOKAR"</title>
+
+    <style type="text/css">
+        #container {
+            height: 450px;
+            width: 650px;
+            margin: 20px auto;
+            position: relative;
+        }
+
+        #img {
+            height: 450px;
+            width: 650px;
+            position: absolute;
+        }
+
+        #leftHolder {
+            height: 450px;
+            width: 100px;
+            top: 0px;
+            position: absolute;
+            left: 0px;
+        }
+
+        #rightHolder {
+            height: 450px;
+            width: 100px;
+            top: 0px;
+            position: absolute;
+            right: 0px;
+        }
+
+        .left {
+            height: 50px;
+            width: 50px;
+            position: absolute;
+            top: 40%;
+            left: 0px;
+
+        }
+
+        .right {
+            height: 50px;
+            width: 50px;
+            position: absolute;
+            top: 40%;
+            right: 0px;
+        }
+
+
+    </style>
+    <script type="text/javascript">
+        var imgcount = 1;
+        var total = 6;
+
+        function slide(x) {
+            var Image = document.getElementById('img');
+            imgcount = imgcount + x;
+            if (imgcount > total) {
+                imgcount = 1;
+            }
+            if (imgcount < 1) {
+                imgcount = total;
+            }
+            Image.src = "../imgages/img" + imgcount + ".jpg";
+        }
+        window.setInterval(function slideAuto(){
+            var Image = document.getElementById('img');
+            imgcount = imgcount + 1;
+
+            if (imgcount > total) {
+                imgcount = 1;
+            }
+            if (imgcount < 1) {
+                imgcount = total;
+            }
+            Image.src = "../images/img" + imgcount + ".jpg";
+        },3000);
+    </script>
+
+
+
 </head>
-<body class="template_a_1">
+<body onload="slideAuto()" class="template_a_1">
 <div id="tokar_gradient">
     <div id="tokar_container_page">
         <div id="tokar_container_header">
@@ -41,18 +122,11 @@
             </ul>
         </div>
         <div id="tokar_container_content">
-            <div id="tokar_content_wrapper" class="clearFix">
-                <div id="slide_frame">
-                    <!--<div class="banner" , style="overflow:hidden;width: 971px;height: 408px">
-                    </div>-->
-                    <img src="images/autoGoods.jpg" alt="first" class="slide">
-                    <img src="images/avtoWash.jpg"alt="second" class="slide">
-                    <img src="images/Girls_Girl_repairing_car_094813_.jpg" class="slide">
-                </div>
-                <div class="slider-nav">
-                    <button type="button" class="slider-previous">Предыдущий</button>
-                    <button type="button" class="slider-next">Следующий</button>
-                </div>
+            <div id="container">
+                <img src="../images/img1.jpg" id="img">
+                <div id="leftHolder"><img onclick="slide(-1)" class="left" src="../images/leftArrow.png"></div>
+                <div id="rightHolder"><img onclick="slide(+1)" class="right" src="../imgage/rightArrow.png"></div>
+            </div>
             </div>
         </div>
         <div id="tokar_container_footer">
