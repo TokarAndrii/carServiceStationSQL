@@ -55,6 +55,23 @@
             right: 0px;
         }
 
+        #tokar_container_header {
+            height: 100px;
+            width: auto;
+        }
+
+        .YourName {
+            text-align: left;
+            /*font-size: 80%;
+            font-family: fantasy;
+            font-style: italic;*/
+        }
+
+        #yourNameCompany {
+            font-size: 80%;
+            font-family: cursive;
+        }
+
 
     </style>
     <script type="text/javascript">
@@ -88,27 +105,50 @@
 </head>
 
 <body onload="slideAuto()" class="template_a_1">
+
 <div id="tokar_gradient">
     <div id="tokar_container_page">
         <div id="tokar_container_header">
             <p class="YourName">
-                <span>Car Service Station</span>
-                "TOKAR"
+                <span id="yourNameCompany">Car Service Station "TOKAR"</span>
+                <span><img src="images/serviceCenterLogo.jpg" class="img-thumbnail" alt="logo"
+                           style="width: 85px; height: 85px;float:right"/></span>
             </p>
-            <img class="logo" width="50" height="50" align="left" src="images/serviceCenterLogo2.jpg">
-
-            <!--<div style="float: right;margin-top: 13px">
-                <p class="YourLogo">
-                    <img src="images/serviceCenterLogo2.jpg" alt="Service Station">
-                    &lt;!&ndash;style="float:right; width: 200px; height: 200px"&ndash;&gt;>
-                </p>
-            </div>-->
         </div>
+
         <nav class="navbar navbar-default">
             <ul class="nav navbar-nav">
-                <li id="tokar_navigation_repair"><a href="#">Ремонт и обслуживание автомобиля</a></li>
-                <li id="tokar_navigation_goods"><a href="#">Автомобильные товары и запчасти</a></li>
-                <li id="tokar_navigation_wash"><a href="#">Автомойка</a></li>
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    Ремонт и обслуживание автомобиля<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Диагностика</a></li>
+                    <li><a href="#">Ремонт двигателя</a></li>
+                    <li><a href="#">Ремонт кузова автомобиля</a></li>
+                    <li><a href="#">Ремонт коробки передач</a></li>
+                    <li><a href="#">Ремонт сцепления</a></li>
+                    <li><a href="#">Ремонт шасси</a></li>
+                    <li><a href="#">Ремонт тормозов</a></li>
+                    <li><a href="#">Ремонт шин</a></li>
+                    <li><a href="#">Замена расходных материалов</a></li>
+                    <li><a href="#">Другой вид ремонта</a></li>
+                </ul></li>
+
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    Автомобильные товары и запчасти<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Запчасти</a></li>
+                    <li><a href="#">Расходные материалы</a></li>
+                    <li><a href="#">Шины и диски</a></li>
+                    <li><a href="#">Сувениры</a></li>
+                </ul></li>
+
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    Автомойка<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Мока автомобиля снаружи</a></li>
+                    <li><a href="#">Мойка и чистка автомобиля внутри</a></li>
+                </ul></li>
+
                 <li id="tokar_navigation_aboutCompany"><a href="#">О компании</a></li>
                 <li class="active"><a href="index.html">Главная</a></li>
             </ul>
@@ -139,8 +179,11 @@
             <li><a href="#">Ваш менеджер</a></li>
             <li><a href="#">Схема проеда и контакты</a></li>
             <li><a href="#">Карта Сайта</a></li>
+            <li><a href="#">Кабинет для сотрудников</a></li>
+
         </ul>
     </div>
+    <!--<div><a href="#">Кабинет для сотрудников</a> </div>-->
 </footer>
 </div>
 </div>

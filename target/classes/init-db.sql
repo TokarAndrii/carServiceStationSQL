@@ -1,7 +1,7 @@
 DROP DATABASE IF EXISTS tokarServiceStation;
 CREATE DATABASE tokarServiceStation;
 
-use stationCarTokar;
+use tokarServiceStation;
 DROP TABLE IF EXISTS clients;
 DROP TABLE IF EXISTS workers;
 DROP TABLE IF EXISTS services;
@@ -17,7 +17,7 @@ phoneNumber VARCHAR(10) UNIQUE,
 email VARCHAR(255) NOT NULL UNIQUE,
 driverLicenseNumber VARCHAR (255) NOT NULL UNIQUE,
 pass VARCHAR (255) NOT NULL UNIQUE,
-PRIMARY KEY (id),
+PRIMARY KEY (id)
 
 );
 

@@ -3,8 +3,8 @@
 <head>
   <link rel="stylesheet" href="stylesheet.css">
   <p>
-    <img src="images/serviceCenterLogo2.jpg" alt="Service Station"
-         style="float:right; width: 200px; height: 200px">
+    <img src="../../images/serviceCenterLogo.jpg" alt="Service Station"
+         style="float:right; width: 135px; height: 135px">
   </p>
 </head>
 <body>

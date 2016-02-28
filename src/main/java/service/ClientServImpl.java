@@ -42,15 +42,19 @@ public class ClientServImpl implements ClientServ {
     @Override
     public Client register(String firstName, String secondName, String phoneNumber,
                            String email, String driverLicenseNumber, String pass) {
+        if(firstName!=null&secondName!=null&phoneNumber!=null&driverLicenseNumber!=null&pass!=null){
+            Client client = new Client(firstName, secondName, phoneNumber,
+                    email, driverLicenseNumber, pass);
+            LOGGER.info("Client made "+client);
 
-        Client client = new Client(firstName, secondName, phoneNumber,
-                email, driverLicenseNumber, pass);
+            String accessToken = StringUtils.generateRandomToken(ACCESS_TOKEN_LENGHT);
 
-        String accessToken = StringUtils.generateRandomToken(ACCESS_TOKEN_LENGHT);
+            accessClientTokenMap.put(accessToken, client);
 
-        accessClientTokenMap.put(accessToken, client);
-
-        return clientDaoJPA.create(client);
+            return clientDaoJPA.create(client);
+        }
+        LOGGER.info("client dont made!!!");
+        return null;
     }
 
 
@@ -63,11 +67,13 @@ public class ClientServImpl implements ClientServ {
 
         if (!pass.equals(client.getPass()) &&
                 !driverLicenseNumber.equals(client.getDriverLicenseNumber())) {
-            System.out.println("wrong pass,email or driverlicense number!!!");
+            //System.out.println("wrong pass,email or driverlicense number!!!");
+            LOGGER.info("wrong pass,email or driverlicense number!!!");
             return null;
         } else {
             String accessToken = StringUtils.generateRandomToken(ACCESS_TOKEN_LENGHT);
             accessClientTokenMap.put(accessToken, client);
+            LOGGER.info("Client "+client+" in system!!1");
 
             return accessToken;
         }
@@ -84,6 +90,7 @@ public class ClientServImpl implements ClientServ {
 
         clientDaoJPA.update(email, pass, driverLicenseNumber,
                 phoneNumber, id);
+        LOGGER.info("Client " +client+" updated!!!");
 
         return client;
     }
@@ -97,7 +104,8 @@ public class ClientServImpl implements ClientServ {
 
 
         clientDaoJPA.delete(client);
-        System.out.println("client deleted (info from clientServ)!!!");
+        //System.out.println("client deleted (info from clientServ)!!!");
+        LOGGER.info("Client "+client+" deleted!!!");
 
 
         return true;
@@ -114,11 +122,12 @@ public class ClientServImpl implements ClientServ {
         Client found = null;
 
         try {
-            clientDaoJPA.findById(id);
+           found= clientDaoJPA.findById(id);
         } catch (NoClientFoundException e) {
             e.printStackTrace();
         }
 
+        LOGGER.info("Client "+found+" found!!");
         return found;
     }
 }
