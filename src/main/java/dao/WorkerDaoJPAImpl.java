@@ -105,13 +105,15 @@ public class WorkerDaoJPAImpl implements WorkerDao {
         return null;
     }
 
+
     @Override
-    public Worker findBySecondName(String workersSecondName) throws NoWorkerFoundException {
+    public Worker findBySecondName(String secondName) throws NoWorkerFoundException {
         EntityManager manager = factory.createEntityManager();
-        Query query = manager.createQuery("SELECT '*' FROM Worker WHERE Worker.secondName=:workersSecondName");
-        List<Worker> worker = query.setParameter("secondName", workersSecondName).getResultList();
-        if (worker == null && worker.size() == 0) {
+        Query query = manager.createQuery("SELECT u FROM Worker u WHERE u.secondName=:secondName");
+        List<Worker> worker = query.setParameter("secondName", secondName).getResultList();
+        if (worker == null || worker.size() == 0) {
             System.out.println("worker not found");
+            return null;
         }
 
 

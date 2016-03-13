@@ -1,5 +1,6 @@
 package servlets.workerServlets;
 
+import model.Admin;
 import model.Worker;
 import model.WorkerTypes;
 import org.apache.log4j.Logger;
@@ -17,7 +18,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet(urlPatterns = {"/registerWorker"})
+@WebServlet(urlPatterns = {"/registerForWorker"})
 public class RegisterController extends HttpServlet{
     private WorkerServ workerServ;
     private static final Logger LOGGER = Logger.getLogger(RegisterController.class);
@@ -27,6 +28,10 @@ public class RegisterController extends HttpServlet{
         ApplicationContext applicationContext = 
                 (ApplicationContext) getServletContext().getAttribute("spring-context");
         workerServ=applicationContext.getBean(WorkerServ.class);
+        Admin admin= applicationContext.getBean(Admin.class);
+        workerServ.register(admin.getFirstName(),admin.getSecondName(),
+                admin.getSalary(),admin.getWorkerTypes(),admin.getLogin(),
+                admin.getPassword());
         
         
         super.init();
@@ -41,6 +46,7 @@ public class RegisterController extends HttpServlet{
         long salary = Long.parseLong(salaryString);
         String workerTypesString = req.getParameter("workerTyps");
         WorkerTypes workerTypes = GetEnumFromString.getEnumFromString(WorkerTypes.class, workerTypesString);
+
         String login = req.getParameter("login");
         String pass = req.getParameter("pass");
 

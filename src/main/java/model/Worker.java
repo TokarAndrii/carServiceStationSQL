@@ -37,11 +37,14 @@ public class Worker  extends IdEntity {
     public Worker() {
     }
 
-    public Worker(String firstName, String secondName, long salary, WorkerTypes workerTypes) {
+    public Worker(String firstName, String secondName, long salary, WorkerTypes workerTypes,String login,
+                  String password) {
         this.firstName = firstName;
         this.secondName = secondName;
         this.salary = salary;
         this.workerTypes = workerTypes;
+        this.login=login;
+        this.password=password;
     }
 
     public String getLogin() {

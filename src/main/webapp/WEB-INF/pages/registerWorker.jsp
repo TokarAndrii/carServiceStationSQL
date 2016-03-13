@@ -1,6 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-<%@include file="WEB-INF/pages/import.jsp" %>
+<%@include file="import.jsp" %>
 <head>
     <title>Register Worker page</title>
 </head>

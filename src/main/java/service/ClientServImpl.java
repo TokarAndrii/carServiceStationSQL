@@ -7,7 +7,6 @@ import model.Client;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Repository;
 import util.StringUtils;
 import validator.Validator;
 
@@ -18,7 +17,7 @@ import java.util.concurrent.ConcurrentHashMap;
 public class ClientServImpl implements ClientServ {
     private static final Logger LOGGER = Logger.getLogger(ClientServImpl.class);
 
-    private Map<String, Client> accessClientTokenMap = new ConcurrentHashMap<>();
+    private Map<String, Client> accessTokenMap = new ConcurrentHashMap<>();
     public static final int ACCESS_TOKEN_LENGHT = 12;
 
     @Autowired
@@ -49,7 +48,7 @@ public class ClientServImpl implements ClientServ {
 
             String accessToken = StringUtils.generateRandomToken(ACCESS_TOKEN_LENGHT);
 
-            accessClientTokenMap.put(accessToken, client);
+            accessTokenMap.put(accessToken, client);
 
             return clientDaoJPA.create(client);
         }
@@ -72,7 +71,7 @@ public class ClientServImpl implements ClientServ {
             return null;
         } else {
             String accessToken = StringUtils.generateRandomToken(ACCESS_TOKEN_LENGHT);
-            accessClientTokenMap.put(accessToken, client);
+            accessTokenMap.put(accessToken, client);
             LOGGER.info("Client "+client+" in system!!1");
 
             return accessToken;
@@ -83,7 +82,7 @@ public class ClientServImpl implements ClientServ {
     public Client update(String phoneNumber, String email, String driverLicenseNumber, String pass) {
         String accessToken = login(email, pass, driverLicenseNumber);
 
-        Client client = accessClientTokenMap.get(accessToken);
+        Client client = accessTokenMap.get(accessToken);
 
         long id = client.getId();
 
@@ -100,7 +99,7 @@ public class ClientServImpl implements ClientServ {
 
         String accessToken = login(email, pass, driverLicenseNumber);
 
-        Client client = accessClientTokenMap.get(accessToken);
+        Client client = accessTokenMap.get(accessToken);
 
 
         clientDaoJPA.delete(client);
@@ -113,7 +112,8 @@ public class ClientServImpl implements ClientServ {
 
     @Override
     public Client getClient(String accessToken) {
-        return accessClientTokenMap.get(accessToken);
+
+        return accessTokenMap.get(accessToken);
     }
 
     @Override

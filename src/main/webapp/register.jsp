@@ -63,13 +63,6 @@
                 <input type="email" class="form-control" name="email" placeholder="Enter Email">
             </div>
         </div>
-       <%-- <div class="form-group">
-            <label class="control-label col-sm-2">Pass:</label>
-
-            <div class="col-sm-10">
-                <input class="form-control" name="pass" type="password" placeholder="Enter password">
-            </div>
-        </div>--%>
 
         <div class="form-group">
             <label class="control-label col-sm-2">Password:</label>

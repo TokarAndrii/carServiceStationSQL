@@ -29,7 +29,6 @@ model/Admin.class
 dao/ClientDao.class
 exeption/MyValidationException.class
 service/ServiceForClientServImpl.class
-filter/SessionFilterWorker.class
 servlets/clientsServlets/DeleteController.class
 servlets/workerServlets/LoginController.class
 model/WorkerTypes.class

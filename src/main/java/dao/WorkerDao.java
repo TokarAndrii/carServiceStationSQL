@@ -21,7 +21,7 @@ public interface WorkerDao {
 
     Worker findByLogin (String login);
 
-    Worker findBySecondName(String workersSecondName)
+    Worker findBySecondName(String secondName)
             throws NoWorkerFoundException;
 
     boolean delete(Worker worker);

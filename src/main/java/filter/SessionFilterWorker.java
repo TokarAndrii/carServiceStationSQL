@@ -1,3 +1,4 @@
+/*
 package filter;
 
 
@@ -22,6 +23,7 @@ public class SessionFilterWorker implements Filter {
         ApplicationContext applicationContext = (
                 ApplicationContext) filterConfig.getServletContext().getAttribute("spring-context");
         workServ=applicationContext.getBean(WorkServImpl.class);
+
     }
 
     @Override
@@ -50,3 +52,4 @@ public class SessionFilterWorker implements Filter {
     }
 }
 ;
+*/

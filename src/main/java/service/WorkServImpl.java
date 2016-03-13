@@ -19,7 +19,7 @@ import java.util.concurrent.ConcurrentHashMap;
 public class WorkServImpl implements WorkerServ {
     private static final Logger LOGGER = Logger.getLogger(ClientServImpl.class);
 
-    private Map<String, Worker> accessWorkerTokenMap = new ConcurrentHashMap<>();
+    private Map<String, Worker> accessTokenMap = new ConcurrentHashMap<>();
 
     public static final int ACCESS_TOKEN_LENGHT = 12;
 
@@ -28,52 +28,71 @@ public class WorkServImpl implements WorkerServ {
 
 
     public WorkServImpl() {
-        Worker administrator = Admin.getUniqueinstance();
+       /* Admin admin;
+        Worker administrator = Admin.getInstance();
+        if (administrator == null) {
+            admin = new Admin();
+        }
+
+        Worker worker = workerDaoJPA.findBySecondName(admin.getSecondName());*/
     }
 
 
     @Override
     public Worker register(String firstName, String secondName, long salary, WorkerTypes workerTypes,
                            String login, String pass) {
-        String acessToken = login(login, pass);
-        Worker worker = accessWorkerTokenMap.get(acessToken);
-        if (worker.getWorkerTypes() == WorkerTypes.ADMINISTRATOR) {
-            System.out.println("starting registration of worker");
-            LOGGER.info("starting registration of worker"+worker.toString());
-            Worker newWorker = new Worker(firstName, secondName, salary, workerTypes);
+        if (firstName != null & secondName != null & salary != 0 & workerTypes != null & login != null & pass != null) {
+            if (workerTypes == WorkerTypes.ADMINISTRATOR) {
+                Worker worker = null;
+                Admin admin = Admin.getInstance();
+                try {
+                    worker = workerDaoJPA.findBySecondName("testAdminSecondName");
+                } catch (NoWorkerFoundException e) {
+                    e.printStackTrace();
+                }
+                if (worker == null) {
+                    workerDaoJPA.create(admin);
+                } else {
+                    return null;
 
-            String randomToken = StringUtils.generateRandomToken(ACCESS_TOKEN_LENGHT);
-            accessWorkerTokenMap.put(randomToken, newWorker);
-            return workerDaoJPA.create(newWorker);
+                }
 
-        } else {
-            System.out.println("you have no rights to registering worker!!!");
-            return null;
+
+            } else {
+                Worker worker = new Worker(firstName, secondName, salary, workerTypes, login, pass);
+                LOGGER.info(worker.toString() + " created");
+                String accessToken = StringUtils.generateRandomToken(ACCESS_TOKEN_LENGHT);
+                accessTokenMap.put(accessToken, worker);
+                return workerDaoJPA.create(worker);
+            }
         }
+        return null;
+
     }
+
 
     @Override
     public String login(String login, String pass) {
         Worker worker = workerDaoJPA.findByLogin(login);
         if (worker.getPassword() == pass) ;
-        String randomToken = StringUtils.generateRandomToken(ACCESS_TOKEN_LENGHT);
+        String accessToken = StringUtils.generateRandomToken(ACCESS_TOKEN_LENGHT);
 
-        accessWorkerTokenMap.put(randomToken, worker);
+        accessTokenMap.put(accessToken, worker);
 
-        return randomToken;
+        return accessToken;
     }
 
     @Override
-    public Worker update(String firstName, String secondName,long idOfWorker, long salary,String login,
+    public Worker update(String firstName, String secondName, long idOfWorker, long salary, String login,
                          WorkerTypes workerTypes, String loginOfAdmin, String passOfAdmin) {
-        String  acessToken=login(loginOfAdmin, passOfAdmin);
-        Worker workerFromMap=accessWorkerTokenMap.get(acessToken);
-        if (workerFromMap.getWorkerTypes()==WorkerTypes.ADMINISTRATOR) {
+        String acessToken = login(loginOfAdmin, passOfAdmin);
+        Worker workerFromMap = accessTokenMap.get(acessToken);
+        if (workerFromMap.getWorkerTypes() == WorkerTypes.ADMINISTRATOR) {
 
             Worker workerUpdated = workerDaoJPA.update(firstName, secondName, salary,
                     workerTypes, idOfWorker, login);
-            String randomToken = StringUtils.generateRandomToken(ACCESS_TOKEN_LENGHT);
-            accessWorkerTokenMap.put(randomToken,workerUpdated);
+            String accessToken = StringUtils.generateRandomToken(ACCESS_TOKEN_LENGHT);
+            accessTokenMap.put(accessToken, workerUpdated);
             return workerUpdated;
         }
         System.out.println("you have no rights to updating worker!!!");
@@ -82,10 +101,10 @@ public class WorkServImpl implements WorkerServ {
 
     @Override
     public boolean delete(long idWorkerForDeleting, String loginOfAdmin, String passOfAdmin) {
-        String  acessToken=login(loginOfAdmin,passOfAdmin);
-        Worker workerFromMap=accessWorkerTokenMap.get(acessToken);
+        String accessToken = login(loginOfAdmin, passOfAdmin);
+        Worker workerFromMap = accessTokenMap.get(accessToken);
         Worker workerForDeleting = null;
-        if (workerFromMap.getWorkerTypes()==WorkerTypes.ADMINISTRATOR){
+        if (workerFromMap.getWorkerTypes() == WorkerTypes.ADMINISTRATOR) {
             try {
                 workerForDeleting = workerDaoJPA.findById(idWorkerForDeleting);
             } catch (NoWorkerFoundException e) {
@@ -130,7 +149,7 @@ public class WorkServImpl implements WorkerServ {
         return null;
     }
 
-    public Worker getWorker(String accessToken){
-       return accessWorkerTokenMap.get(accessToken);
+    public Worker getWorker(String accessToken) {
+        return accessTokenMap.get(accessToken);
     }
 }

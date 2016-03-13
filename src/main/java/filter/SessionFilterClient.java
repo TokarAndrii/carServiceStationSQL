@@ -1,9 +1,12 @@
 package filter;
 
+import model.Admin;
 import model.Client;
+import model.Worker;
 import org.apache.log4j.Logger;
 import org.springframework.context.ApplicationContext;
 import service.ClientServImpl;
+import service.WorkServImpl;
 
 import javax.servlet.*;
 import javax.servlet.http.Cookie;
@@ -14,6 +17,7 @@ import java.io.IOException;
 public class SessionFilterClient implements Filter {
     private static final Logger LOGGER = Logger.getLogger(SessionFilterClient.class);
     private ClientServImpl clientServ;
+    private WorkServImpl workServ;
 
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
@@ -21,7 +25,12 @@ public class SessionFilterClient implements Filter {
                 (ApplicationContext) filterConfig.getServletContext().getAttribute("spring-context");
 
         clientServ = applicationContext.getBean(ClientServImpl.class);
+        workServ = applicationContext.getBean(WorkServImpl.class);
+       /* Admin admin = applicationContext.getBean(Admin.class);
 
+        admin.getUniqueinstance();
+        workServ.register(admin.getFirstName(),admin.getSecondName(),admin.getSalary(),
+                admin.getWorkerTypes(),admin.getPassword(),admin.getLogin());*/
     }
 
     @Override
@@ -33,20 +42,27 @@ public class SessionFilterClient implements Filter {
 
         Cookie[] cookies = request.getCookies();
         for (Cookie cookie : cookies) {
-            if (cookie.getName().equals("accessToken")) {
+            if (cookie.getName().equals("accessToken") && cookie.equals("acessToken")) {
                 String value = cookie.getValue();
-                Client client = clientServ.getClient(value);
+                if (clientServ.getClient(value) != null) {
+                    Client client = clientServ.getClient(value);
 
-                request.setAttribute("clientSessionToken", value);
+                    request.setAttribute("accessToken", value);
 
-                if (client == null) {
-                    LOGGER.info("Authentification failled");
                    /* resp.sendRedirect("auth-error.html");*/
                 }
+                if (workServ.getWorker(value) != null) {
+                    Worker worker = workServ.getWorker(value);
+                    request.setAttribute("accessToken", value);
+                } else {
+                    LOGGER.info("Authentification failled");
+                }
             }
+
         }
-        filterChain.doFilter(request, response);
-    }
+
+    filterChain.doFilter(request,response);
+}
 
     @Override
     public void destroy() {

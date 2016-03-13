@@ -111,8 +111,10 @@ public class ClientDaoJPAImpl implements ClientDao {
         EntityManager manager = factory.createEntityManager();
         javax.persistence.Query query = manager.createQuery("SELECT u FROM Client u WHERE u.email = :email");
         List<Client> clients = query.setParameter("email", email).getResultList();
+
         if (clients == null || clients.size() == 0) {
             System.out.println("no client found info from ClientDaoJPAImpl");
+            return null;
 
         }
 

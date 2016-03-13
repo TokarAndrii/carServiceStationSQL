@@ -24,8 +24,20 @@
     <context:component-scan base-package="service"/>
     <context:component-scan base-package="stationCarTokar"/>
     <context:component-scan base-package="dao"/>
+
     <!--<context:component-scan base-package="service"/>
+
+
 -->
+    <bean name="admin" class="model.Admin" scope="singleton">
+        <property name="firstName"  value="testAdminFirstName" />
+        <property name="secondName" value="testAdminSecondName"/>
+        <property name="login" value="admin"/>
+        <property name="password" value="admin"/>
+        <property name="workerTypes" value="ADMINISTRATOR"/>
+        <property name="salary" value="10000"/>
+
+    </bean>
 
 
     <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
