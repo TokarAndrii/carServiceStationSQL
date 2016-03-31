@@ -29,13 +29,15 @@
 
 
 -->
-    <bean name="admin" class="model.Admin" scope="singleton">
+    <bean name="admin" class="model.Admin">
         <property name="firstName"  value="testAdminFirstName" />
         <property name="secondName" value="testAdminSecondName"/>
         <property name="login" value="admin"/>
         <property name="password" value="admin"/>
         <property name="workerTypes" value="ADMINISTRATOR"/>
         <property name="salary" value="10000"/>
+        <property name="id" value="1"/>
+
 
     </bean>
 

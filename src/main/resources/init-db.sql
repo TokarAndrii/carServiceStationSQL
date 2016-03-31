@@ -10,7 +10,7 @@ DROP TABLE IF EXISTS workers_services;
 
 
 CREATE TABLE clients(
-id int AUTO_INCREMENT,
+id BIGINT AUTO_INCREMENT NOT NULL,
 firstName VARCHAR(255) NOT NULL,
 secondName VARCHAR(255) NOT NULL,
 phoneNumber VARCHAR(10) UNIQUE,
@@ -22,7 +22,7 @@ PRIMARY KEY (id)
 );
 
 CREATE TABLE workers(
-id int AUTO_INCREMENT,
+id BIGINT AUTO_INCREMENT NOT NULL,
 firstName VARCHAR(255) NOT NULL UNIQUE,
 secondName VARCHAR(255) NOT NULL UNIQUE,
 salary DOUBLE NOT NULL,
@@ -34,16 +34,16 @@ workerTypes ENUM(MASTER_OF_REPAIR_1_KATEGORY, MASTER_OF_REPAIR_2_KATEGORY, MASTE
 );
 
 CREATE TABLE workers_services(
-id_workerServices INT AUTO_INCREMENT,
-worker_id INT,
-service_id INT,
+id_workerServices BIGINT AUTO_INCREMENT,
+worker_id BIGINT,
+service_id BIGINT,
 PRIMARY KEY (id_workerServices),
 FOREIGN KEY (worker_id) REFERENCES workers (worker_id),
 FOREIGN KEY (service_id) REFERENCES services(service_id)
 );
 
 CREATE TABLE services(
-service_id INT AUTO_INCREMENT,
+service_id BIGINT AUTO_INCREMENT NOT NULL,
 serviceTypes ENUM(REPAIR_BODY_CAR, REPAIR_MOTOR, REPAIR_CHASSIS, REPAIR_BRAKE, REPAIR_CLUTCH,
                   REPAIR_GEARBOX, CHANGE_TIRES, CHANGE_CONSUMABLES, DIAGNOSTIC, WASH_CAR_OUTSIDE,
                   WASH_CAR_INSIDE, WASH_TOTAL, WARRANTY_SERVICE),
@@ -51,7 +51,7 @@ timeToDo TIME,
 startDate DATETIME,
 finishDate DATETIME,
 priceOfService DOUBLE NOT NULL,
-client_id INT,
+client_id FLOAT,
 FOREIGN KEY (client_id) REFERENCES clients(id),
 PRIMARY KEY (service_id)
 

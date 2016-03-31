@@ -17,7 +17,7 @@ public interface WorkerDao {
 
     List<Worker> findAll();
 
-    Worker findById(long id) throws NoWorkerFoundException;
+    Worker findById(long id);
 
     Worker findByLogin (String login);
 

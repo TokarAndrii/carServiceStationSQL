@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import util.StringUtils;
 
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -26,8 +27,26 @@ public class WorkServImpl implements WorkerServ {
     @Autowired
     private WorkerDaoJPAImpl workerDaoJPA;
 
-
     public WorkServImpl() {
+    }
+
+    /*  public WorkServImpl() {
+        Worker found = null;
+        try {
+            found = workerDaoJPA.findById(1);
+        } catch (NoWorkerFoundException e) {
+            e.printStackTrace();
+        }
+        if (found == null) {
+            Admin admin = new Admin("admin", WorkerTypes.ADMINISTRATOR, "firstNameAdm", "secondNameAdm", 10000, "admin");
+        }
+        else {
+            System.out.println("admin exist already in Data Base");
+        }
+
+*/
+
+
        /* Admin admin;
         Worker administrator = Admin.getInstance();
         if (administrator == null) {
@@ -35,37 +54,39 @@ public class WorkServImpl implements WorkerServ {
         }
 
         Worker worker = workerDaoJPA.findBySecondName(admin.getSecondName());*/
-    }
 
 
     @Override
     public Worker register(String firstName, String secondName, long salary, WorkerTypes workerTypes,
                            String login, String pass) {
-        if (firstName != null & secondName != null & salary != 0 & workerTypes != null & login != null & pass != null) {
-            if (workerTypes == WorkerTypes.ADMINISTRATOR) {
-                Worker worker = null;
-                Admin admin = Admin.getInstance();
-                try {
-                    worker = workerDaoJPA.findBySecondName("testAdminSecondName");
-                } catch (NoWorkerFoundException e) {
-                    e.printStackTrace();
-                }
-                if (worker == null) {
-                    workerDaoJPA.create(admin);
-                } else {
-                    return null;
+        Worker admin = new Worker(firstName, workerTypes, pass, login, salary, secondName);
+        if (workerTypes == WorkerTypes.ADMINISTRATOR) {
 
-                }
+            List<Worker> workerList = workerDaoJPA.workersByType(WorkerTypes.ADMINISTRATOR);
 
+            if (workerList.size() != 0 && workerList != null) {
+                return workerList.get(0);
+            }
+            else {
+                String accessToken = StringUtils.generateRandomToken(ACCESS_TOKEN_LENGHT);
+                accessTokenMap.put(accessToken, admin);
+                return workerDaoJPA.create(admin);
+            }
 
-            } else {
+        }
+
+        if (workerTypes != WorkerTypes.ADMINISTRATOR) {
+
+            if (firstName != null && secondName != null && salary != 0 && workerTypes != null & login != null && pass != null) {
                 Worker worker = new Worker(firstName, secondName, salary, workerTypes, login, pass);
-                LOGGER.info(worker.toString() + " created");
                 String accessToken = StringUtils.generateRandomToken(ACCESS_TOKEN_LENGHT);
                 accessTokenMap.put(accessToken, worker);
                 return workerDaoJPA.create(worker);
+            } else {
+                return null;
             }
         }
+
         return null;
 
     }
@@ -105,11 +126,9 @@ public class WorkServImpl implements WorkerServ {
         Worker workerFromMap = accessTokenMap.get(accessToken);
         Worker workerForDeleting = null;
         if (workerFromMap.getWorkerTypes() == WorkerTypes.ADMINISTRATOR) {
-            try {
-                workerForDeleting = workerDaoJPA.findById(idWorkerForDeleting);
-            } catch (NoWorkerFoundException e) {
-                e.printStackTrace();
-            }
+
+            workerForDeleting = workerDaoJPA.findById(idWorkerForDeleting);
+
             workerDaoJPA.delete(workerForDeleting);
             return true;
         }
@@ -136,6 +155,7 @@ public class WorkServImpl implements WorkerServ {
 
     @Override
     public Worker getWorkerById(long workerId, String login, String pass) {
+
         return null;
     }
 
@@ -152,4 +172,31 @@ public class WorkServImpl implements WorkerServ {
     public Worker getWorker(String accessToken) {
         return accessTokenMap.get(accessToken);
     }
+
+   /* @Override
+    public Worker registerAdmin(String firstName, String secondName, long salary, WorkerTypes workerTypes, String login, String pass, long id) {
+        Worker found = null;
+        try {
+            found = workerDaoJPA.findById(1);
+        } catch (NoWorkerFoundException e) {
+            e.printStackTrace();
+        }
+
+        if (found == null) {
+            if (firstName != null && secondName != null && salary != 0 && workerTypes == WorkerTypes.ADMINISTRATOR && login != null &&
+                    pass != null & id != 0) {
+
+
+                Admin adm = Admin.getInstance();
+                adm.setId(1);
+                String accessToken = StringUtils.generateRandomToken(ACCESS_TOKEN_LENGHT);
+
+                accessTokenMap.put(accessToken, adm);
+
+                return workerDaoJPA.create(adm);
+
+            }
+        }
+        return null;
+    }*/
 }

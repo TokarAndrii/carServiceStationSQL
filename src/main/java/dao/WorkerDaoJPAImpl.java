@@ -47,12 +47,12 @@ public class WorkerDaoJPAImpl implements WorkerDao {
     }
 
     @Override
-    public Worker update(String firstName, String secondName, long salary, WorkerTypes workerTypes, long id,String login) {
+    public Worker update(String firstName, String secondName, long salary, WorkerTypes workerTypes, long id, String login) {
 
         EntityManager manager = factory.createEntityManager();
         EntityTransaction transaction = manager.getTransaction();
         Worker found = null;
-        try {
+        //try {
             found = findById(id);
 
             if (found == null) {
@@ -66,16 +66,16 @@ public class WorkerDaoJPAImpl implements WorkerDao {
             found.setWorkerTypes(workerTypes);
             found.setLogin(login);
 
-        } catch (NoWorkerFoundException e) {
+        /*} catch (NoWorkerFoundException e) {
             e.printStackTrace();
 
-        }
+        }*/
 
-        try{
+        try {
             transaction.begin();
             manager.merge(found);
             transaction.commit();
-        }catch (Exception e){
+        } catch (Exception e) {
             System.out.println("transaction is not done!!!");
             transaction.rollback();
         }
@@ -87,17 +87,22 @@ public class WorkerDaoJPAImpl implements WorkerDao {
     public List<Worker> findAll() {
         EntityManager manager = factory.createEntityManager();
         Query query = manager.createQuery("SELECT '*' FROM Worker");
+
         List<Worker> allWorkers = query.getResultList();
 
         return allWorkers;
     }
 
     @Override
-    public Worker findById(long id) throws NoWorkerFoundException {
+    public Worker findById(long id) {
         EntityManager manager = factory.createEntityManager();
         Worker worker = manager.find(Worker.class, id);
 
-        return worker;
+        if (worker != null) {
+            return worker;
+        }
+
+        return null;
     }
 
     @Override
@@ -110,7 +115,9 @@ public class WorkerDaoJPAImpl implements WorkerDao {
     public Worker findBySecondName(String secondName) throws NoWorkerFoundException {
         EntityManager manager = factory.createEntityManager();
         Query query = manager.createQuery("SELECT u FROM Worker u WHERE u.secondName=:secondName");
+
         List<Worker> worker = query.setParameter("secondName", secondName).getResultList();
+
         if (worker == null || worker.size() == 0) {
             System.out.println("worker not found");
             return null;
@@ -142,7 +149,7 @@ public class WorkerDaoJPAImpl implements WorkerDao {
     @Override
     public List<Worker> workersByType(WorkerTypes workerType) {
         EntityManager manager = factory.createEntityManager();
-        Query query = manager.createQuery("SELECT '*' FROM Worker WHERE Worker .workerTypes=:workerType");
+        Query query = manager.createQuery("SELECT w  FROM Worker w WHERE w.workerTypes=:workerType");
         List<Worker> workersByType = query.setParameter("workerType", workerType).getResultList();
 
         if (workersByType == null && workersByType.size() == 0) {
@@ -155,7 +162,7 @@ public class WorkerDaoJPAImpl implements WorkerDao {
     @Override
     public List<ServiceForClient> findServiceForClientsFromWorker(String workersSecondName) {
 
-       EntityManager manager = factory.createEntityManager();
+        EntityManager manager = factory.createEntityManager();
         Query query = manager.createQuery("SELECT '*' FROM  ServiceForClient WHERE Worker.secondName=:workerSecondName");
         List<ServiceForClient> serviceForClientByWorker = query.setParameter("secondName", workersSecondName).getResultList();
 

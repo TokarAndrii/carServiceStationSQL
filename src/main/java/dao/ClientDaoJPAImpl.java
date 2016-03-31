@@ -88,6 +88,7 @@ public class ClientDaoJPAImpl implements ClientDao {
 
         List<Client> clients = query.getResultList();
 
+
         return clients;
     }
 

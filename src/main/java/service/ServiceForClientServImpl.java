@@ -48,13 +48,10 @@ public class ServiceForClientServImpl implements ServiceForClientServ {
         String  randomToken=StringUtils.generateRandomToken(ACCESS_TOKEN_LENGHT);
         accessTokenMap.put(randomToken, serviceForClient);
 
-        try {
+
             Worker worker=workerDao.findById(workerId);
             serviceForClient.addWorker(worker);
-        } catch (NoWorkerFoundException e) {
-            System.out.println("wrong worker id'");
-            e.printStackTrace();
-        }
+
         serviceForClientDaoJPA.start(serviceForClient);
 
         return serviceForClientDaoJPA.start(serviceForClient);
