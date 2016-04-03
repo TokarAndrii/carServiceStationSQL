@@ -3,6 +3,7 @@ pages/CarServStation.class
 model/Worker.class
 service/ClientServImpl.class
 service/ClientServ.class
+pages/ClientLoginPage.class
 validator/Validator.class
 util/PropertyLoader.class
 dao/ServiceForClientDaoJPAImpl.class

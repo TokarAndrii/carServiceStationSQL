@@ -7,7 +7,7 @@ import java.util.Properties;
 
 public class PropertyLoader {
 
-    private static final String PROPERTY_FILE = "/home/tokar/IdeaProjects/carServiceStation/carServiceStation/src/main/resources/application.properties";
+    private static final String PROPERTY_FILE = "/application.properties";
 
     public static String loadProperty(String name) {
 

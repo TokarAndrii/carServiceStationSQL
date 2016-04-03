@@ -1,0 +1,26 @@
+2016-04-04 00:33:07 INFO  Fixture:36 - Start Test Suite executions
+2016-04-04 00:33:07 INFO  Page:32 - Start open page
+2016-04-04 00:33:07 INFO  Page:32 - Start open page
+2016-04-04 00:33:07 INFO  Page:39 - Successful open page!!!
+2016-04-04 00:33:07 INFO  Page:39 - Successful open page!!!
+2016-04-04 00:33:07 INFO  WebElementsActions:58 - ----Click on link---LoginLink
+2016-04-04 00:33:07 INFO  MainPage:23 - click on LOginLink
+2016-04-04 00:33:07 INFO  WebElementsActions:58 - ----Click on link---LoginLink
+2016-04-04 00:33:07 INFO  MainPage:23 - click on LOginLink
+2016-04-04 00:33:07 INFO  WebElementsActions:94 - ---Element is presernt EmailField !!!
+2016-04-04 00:33:07 INFO  MainPage:27 - Switch to login page was correct!!!
+2016-04-04 00:33:07 INFO  WebElementsActions:94 - ---Element is presernt EmailField !!!
+2016-04-04 00:33:07 INFO  MainPage:27 - Switch to login page was correct!!!
+2016-04-04 00:33:37 INFO  Page:32 - Start open page
+2016-04-04 00:33:37 INFO  Page:32 - Start open page
+2016-04-04 00:33:37 INFO  Page:39 - Successful open page!!!
+2016-04-04 00:33:37 INFO  Page:39 - Successful open page!!!
+2016-04-04 00:33:38 INFO  WebElementsActions:58 - ----Click on link---LoginLink
+2016-04-04 00:33:38 INFO  MainPage:23 - click on LOginLink
+2016-04-04 00:33:38 INFO  WebElementsActions:58 - ----Click on link---LoginLink
+2016-04-04 00:33:38 INFO  MainPage:23 - click on LOginLink
+2016-04-04 00:33:38 INFO  WebElementsActions:94 - ---Element is presernt EmailField !!!
+2016-04-04 00:33:38 INFO  MainPage:27 - Switch to login page was correct!!!
+2016-04-04 00:33:38 INFO  WebElementsActions:94 - ---Element is presernt EmailField !!!
+2016-04-04 00:33:38 INFO  MainPage:27 - Switch to login page was correct!!!
+2016-04-04 00:34:08 INFO  Fixture:42 - Test Suite executions completed

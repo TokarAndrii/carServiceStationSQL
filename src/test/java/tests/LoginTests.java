@@ -12,7 +12,63 @@ public class LoginTests extends Fixture {
 
         carServStation.mainPage.openPage();
         carServStation.mainPage.switchToLoginPage();
+        carServStation.clientLoginPage.fillEmailField("tokar.andrii@gmail.com");
+        carServStation.clientLoginPage.fillPasswordfield("tokar1");
+        carServStation.clientLoginPage.fillDriverLicenceNumber("123890");
+        carServStation.clientLoginPage.pressLoginButton();
+
 
     }
+
+    @Test
+    public void test2_negativeLogin() {
+        carServStation.mainPage.openPage();
+        carServStation.mainPage.switchToLoginPage();
+        carServStation.clientLoginPage.fillEmailField("tokar@gmail.com");
+        carServStation.clientLoginPage.fillPasswordfield("tokar2");
+        carServStation.clientLoginPage.fillDriverLicenceNumber("123891");
+        carServStation.clientLoginPage.pressLoginButton();
+        //Assert.assertTrue(ellos.loginPage.isErrorShown("ErrorMess"), "Incorrect login to the system with fake log/pass");
+    }
+
+    @Test
+    public void test3_blankEmailField() {
+        carServStation.mainPage.openPage();
+        carServStation.mainPage.switchToLoginPage();
+        carServStation.clientLoginPage.fillEmailField("");
+        carServStation.clientLoginPage.fillPasswordfield("tokar2");
+        carServStation.clientLoginPage.fillDriverLicenceNumber("123891");
+        carServStation.clientLoginPage.pressLoginButton();
+    }
+
+    @Test
+    public void test4_blankPasswordField() {
+        carServStation.mainPage.openPage();
+        carServStation.mainPage.switchToLoginPage();
+        carServStation.clientLoginPage.fillEmailField("tokar.andrii@gmail.com");
+        carServStation.clientLoginPage.fillPasswordfield("");
+        carServStation.clientLoginPage.fillDriverLicenceNumber("123890");
+        carServStation.clientLoginPage.pressLoginButton();
+    }
+
+    public void test5_blankDriverLicenceNumberField() {
+        carServStation.mainPage.openPage();
+        carServStation.mainPage.switchToLoginPage();
+        carServStation.clientLoginPage.fillEmailField("tokar.andrii@gmail.com");
+        carServStation.clientLoginPage.fillPasswordfield("tokar1");
+        carServStation.clientLoginPage.fillDriverLicenceNumber("");
+        carServStation.clientLoginPage.pressLoginButton();
+    }
+
+    public void test6_blankAllFields() {carServStation.mainPage.openPage();
+        carServStation.mainPage.switchToLoginPage();
+        carServStation.clientLoginPage.fillEmailField("");
+        carServStation.clientLoginPage.fillPasswordfield("");
+        carServStation.clientLoginPage.fillDriverLicenceNumber("");
+        carServStation.clientLoginPage.pressLoginButton();
+
+    }
+
+
 
 }

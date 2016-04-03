@@ -19,8 +19,9 @@
 <div id="tokar_container_header">
     <p class="headerLogin">
         <span id="loginClientForm">Вход в личный кабинет клиента</span>
-                <span><img src="images/serviceCenterLogo.jpg" class="img-thumbnail" alt="logo"
-                           style="width: 85px; height: 85px;float:right"/></span>
+                <span><a href="index.html"> <img src="images/serviceCenterLogo.jpg" class="img-thumbnail" alt="logo"
+                                                 style="width: 85px; height: 85px;float:right"/></a>
+                   </span>
     </p>
 </div>
 <br>

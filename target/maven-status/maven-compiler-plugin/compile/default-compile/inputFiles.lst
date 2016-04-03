@@ -21,6 +21,7 @@
 /home/tokar/IdeaProjects/carServiceStation/carServiceStation/src/main/java/model/ServiceTypes.java
 /home/tokar/IdeaProjects/carServiceStation/carServiceStation/src/main/java/servlets/clientsServlets/UpdateController.java
 /home/tokar/IdeaProjects/carServiceStation/carServiceStation/src/main/java/exeption/MyValidationException.java
+/home/tokar/IdeaProjects/carServiceStation/carServiceStation/src/main/java/pages/ClientLoginPage.java
 /home/tokar/IdeaProjects/carServiceStation/carServiceStation/src/main/java/util/WebElementsActions.java
 /home/tokar/IdeaProjects/carServiceStation/carServiceStation/src/main/java/pages/CarServStation.java
 /home/tokar/IdeaProjects/carServiceStation/carServiceStation/src/main/java/listener/SpringContextInitListener.java

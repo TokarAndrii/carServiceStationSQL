@@ -1,8 +1,8 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Full site" verbose="1" parallel="methods" thread-count="2">
-    <suite-files>
+    <!--<suite-files>
         <suite-file path="testng.xml"/>
-    </suite-files>
+    </suite-files>-->
     <parameter name="browser" value="firefox"></parameter>
     <parameter name="hubAdress" value="http://127.0.0.1:4444/wd/hub"></parameter>
 
@@ -11,6 +11,7 @@
         <classes>
             <class name="tests.LoginTests"/>
         </classes>
+
     </test>
 
 </suite>
