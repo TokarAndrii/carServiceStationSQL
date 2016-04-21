@@ -50,7 +50,7 @@ public class LoginTests extends Fixture {
         carServStation.clientLoginPage.fillDriverLicenceNumber("123890");
         carServStation.clientLoginPage.pressLoginButton();
     }
-
+    @Test
     public void test5_blankDriverLicenceNumberField() {
         carServStation.mainPage.openPage();
         carServStation.mainPage.switchToLoginPage();
@@ -60,6 +60,7 @@ public class LoginTests extends Fixture {
         carServStation.clientLoginPage.pressLoginButton();
     }
 
+    @Test
     public void test6_blankAllFields() {carServStation.mainPage.openPage();
         carServStation.mainPage.switchToLoginPage();
         carServStation.clientLoginPage.fillEmailField("");

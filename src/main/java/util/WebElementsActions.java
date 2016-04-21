@@ -62,7 +62,8 @@ public class WebElementsActions {
     //Insert value in text input html field and clean it
 
     public void insertValueAndClear(String inputLocator, String inputData) throws NoElementFound {
-        webDriver.findElement(ConfigData.ui(inputLocator)).clear();
+        //webDriver.findElement(ConfigData.ui(inputLocator)).clear();
+        webDriver.findElement(ConfigData.ui(inputLocator)).sendKeys(Keys.DELETE);
         webDriver.findElement(ConfigData.ui(inputLocator)).sendKeys(inputData);
         LOGGER.info("----Input and clear in----" + inputLocator + " --data: " + inputData);
 

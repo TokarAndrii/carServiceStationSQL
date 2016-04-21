@@ -13,8 +13,8 @@ util/ClassNameUtil.class
 model/Client.class
 model/ServiceTypes.class
 service/WorkerServ.class
-service/ServiceForClientServ.class
 servlets/clientsServlets/LoginController.class
+service/ServiceForClientServ.class
 model/IdEntity.class
 servlets/clientsServlets/RegisterController.class
 util/WebElementsActions.class
@@ -42,8 +42,8 @@ pages/MainPage.class
 exeption/MyValidationException.class
 service/ServiceForClientServImpl.class
 servlets/clientsServlets/DeleteController.class
-model/WorkerTypes.class
 servlets/workerServlets/LoginController.class
+model/WorkerTypes.class
 exeption/WrongUserCredentionalException.class
 servlets/workerServlets/RegisterController.class
 exeption/NoElementFound.class
