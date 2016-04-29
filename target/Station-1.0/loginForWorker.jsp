@@ -32,7 +32,7 @@
 
 <div class="login form">
 
-  <form class="form-horizontal" action="login" method="post">
+  <form class="form-horizontal" action="loginForWorker" method="post">
     <div class="form-group">
       <label class="control-label col-sm-2">Login:</label>
 

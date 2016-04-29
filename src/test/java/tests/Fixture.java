@@ -19,14 +19,14 @@ public class Fixture {
 
     private static final Logger LOGGER = Logger.getLogger(Fixture.class);
 
-    //private static final String implWait = PropertyLoader.loadProperty("wait.timeout");
+    private static final String implWait = PropertyLoader.loadProperty("wait.timeout");
 
     @BeforeSuite(alwaysRun = true)
     @Parameters({ "browser" })
     public void setEnv(String browser){
         webDriverWrapper = WebDriverFactory.initDriver(browser);
-        webDriverWrapper.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
-        //webDriverWrapper.manage().timeouts().implicitlyWait(Long.parseLong(implWait), TimeUnit.SECONDS);
+        //webDriverWrapper.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
+        webDriverWrapper.manage().timeouts().implicitlyWait(Long.parseLong(implWait), TimeUnit.SECONDS);
 
         try {
             carServStation = new CarServStation(webDriverWrapper);

@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <%-- <script>function placeRegister(form) {
+
+         form.submit();
+     }</script>--%>
 </head>
 <body>
 <%--
@@ -31,21 +35,22 @@
         <div class="form-group">
             <label class="control-label col-sm-2">First Name:</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" name="firstName" placeholder="Enter First Name">
+                <input type="text" class="form-control" name="firstName" placeholder="Enter First Name" required>
             </div>
         </div>
 
         <div class="form-group">
-            <label class="control-label col-sm-2" >Second Name:</label>
+            <label class="control-label col-sm-2">Second Name:</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" name="secondName" placeholder="Enter Second Name">
+                <input type="text" class="form-control" name="secondName" placeholder="Enter Second Name" required>
             </div>
         </div>
 
         <div class="form-group">
             <label class="control-label col-sm-2">Phone Number:</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" name="phoneNumber" placeholder="Enter Phone Number">
+                <input type="text" class="form-control" name="phoneNumber" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                       placeholder="Enter Phone Number as example: 000-000-0000">
             </div>
         </div>
 
@@ -53,26 +58,30 @@
             <label class="control-label col-sm-2">DL Number:</label>
             <div class="col-sm-10">
                 <input type="text" class="form-control" name="driverLicenseNumber"
-                       placeholder="Enter Driver License Number">
+                       placeholder="Enter Driver License Number as example: AAA#000000" required pattern="^\w{3}#\d{6}">
             </div>
         </div>
 
         <div class="form-group">
             <label class="control-label col-sm-2">Email:</label>
             <div class="col-sm-10">
-                <input type="email" class="form-control" name="email" placeholder="Enter Email">
+                <input type="email" class="form-control" name="email"
+                       placeholder="Enter Email as example: car@service.com" required
+                       pattern="/^[\w\.-\+]+@[\w-]+(\.\w{2,4})+$/">
             </div>
         </div>
 
         <div class="form-group">
             <label class="control-label col-sm-2">Password:</label>
             <div class="col-sm-10">
-                <input type="password" class="form-control" name="pass" placeholder="Enter password">
+                <input type="password" class="form-control" name="pass"
+                       placeholder="Enter password from 8 to 20 any symbols" required>
             </div>
         </div>
 
         <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
+                <%--<button onclick="placeRegister(this.form);">Subm</button>--%>
                 <button type="submit" class="btn btn-default">Submit</button>
             </div>
         </div>

@@ -14,31 +14,29 @@
                             http://www.springframework.org/schema/tx/spring-tx.xsd">
 
 
-
     <context:property-placeholder location="classpath:db.properties"/>
 
 
-    <context:annotation-config />
+    <context:annotation-config/>
     <!-- scanning only in model and dao-->
-   <!-- <context:component-scan base-package="view"/>-->
+    <!-- <context:component-scan base-package="view"/>-->
     <context:component-scan base-package="service"/>
     <context:component-scan base-package="stationCarTokar"/>
     <context:component-scan base-package="dao"/>
+
 
     <!--<context:component-scan base-package="service"/>
 
 
 -->
     <bean name="admin" class="model.Admin">
-        <property name="firstName"  value="testAdminFirstName" />
+        <property name="firstName" value="testAdminFirstName"/>
         <property name="secondName" value="testAdminSecondName"/>
         <property name="login" value="admin"/>
         <property name="password" value="admin"/>
         <property name="workerTypes" value="ADMINISTRATOR"/>
         <property name="salary" value="10000"/>
         <property name="id" value="1"/>
-
-
     </bean>
 
 
@@ -60,8 +58,6 @@
             <bean class="org.springframework.orm.jpa.vendor.HibernateJpaDialect"/>
         </property>
     </bean>
-
-
 
 
     <!--<bean class="aspect.ClientDaoAspect"/> -->

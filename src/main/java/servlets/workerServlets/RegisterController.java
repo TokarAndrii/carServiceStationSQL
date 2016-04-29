@@ -19,21 +19,21 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 @WebServlet(urlPatterns = {"/registerForWorker"})
-public class RegisterController extends HttpServlet{
+public class RegisterController extends HttpServlet {
     private WorkerServ workerServ;
     private static final Logger LOGGER = Logger.getLogger(RegisterController.class);
-    
+
     @Override
     public void init() throws ServletException {
-        ApplicationContext applicationContext = 
+        ApplicationContext applicationContext =
                 (ApplicationContext) getServletContext().getAttribute("spring-context");
-        workerServ=applicationContext.getBean(WorkerServ.class);
-        Admin admin= applicationContext.getBean(Admin.class);
-        workerServ.register(admin.getFirstName(),admin.getSecondName(),
-                admin.getSalary(),admin.getWorkerTypes(),admin.getLogin(),
+        workerServ = applicationContext.getBean(WorkerServ.class);
+        Admin admin = applicationContext.getBean(Admin.class);
+        workerServ.register(admin.getFirstName(), admin.getSecondName(),
+                admin.getSalary(), admin.getWorkerTypes(), admin.getLogin(),
                 admin.getPassword());
-        
-        
+
+
         super.init();
     }
 
@@ -52,10 +52,10 @@ public class RegisterController extends HttpServlet{
 
 
         PrintWriter printWriter = resp.getWriter();
-        Worker worker = workerServ.register(firstName,secondName,salary,workerTypes,login,pass);
-        LOGGER.info(worker+worker.toString());
-req.getRequestDispatcher("/WEB-INF/pages/clientMenu.jsp").
-                forward(req,resp);
+        Worker worker = workerServ.register(firstName, secondName, salary, workerTypes, login, pass);
+        LOGGER.info(worker + worker.toString());
+        req.getRequestDispatcher("/WEB-INF/pages/clientMenu.jsp").
+                forward(req, resp);
 
 
         printWriter.flush();

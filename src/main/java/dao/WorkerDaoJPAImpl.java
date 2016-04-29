@@ -53,18 +53,18 @@ public class WorkerDaoJPAImpl implements WorkerDao {
         EntityTransaction transaction = manager.getTransaction();
         Worker found = null;
         //try {
-            found = findById(id);
+        found = findById(id);
 
-            if (found == null) {
-                System.out.println("worker not updated!!!");
-                return null;
-            }
+        if (found == null) {
+            System.out.println("worker not updated!!!");
+            return null;
+        }
 
-            found.setFirstName(firstName);
-            found.setSecondName(secondName);
-            found.setSalary(salary);
-            found.setWorkerTypes(workerTypes);
-            found.setLogin(login);
+        found.setFirstName(firstName);
+        found.setSecondName(secondName);
+        found.setSalary(salary);
+        found.setWorkerTypes(workerTypes);
+        found.setLogin(login);
 
         /*} catch (NoWorkerFoundException e) {
             e.printStackTrace();
@@ -107,7 +107,13 @@ public class WorkerDaoJPAImpl implements WorkerDao {
 
     @Override
     public Worker findByLogin(String login) {
-        return null;
+        EntityManager entityManager = factory.createEntityManager();
+        Query query = entityManager.createQuery("SELECT w FROM Worker w WHERE w.login=:admin");
+        List<Worker> workers = query.setParameter("admin", login).getResultList();
+        if (workers == null || workers.size() == 0) {
+            return null;
+        }
+        return workers.get(0);
     }
 
 

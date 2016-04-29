@@ -20,12 +20,13 @@ import java.util.logging.Logger;
 @WebServlet(urlPatterns = {"/loginForWorker"})
 public class LoginController extends HttpServlet {
     private static final org.apache.log4j.Logger LOGGER =
-            org.apache.log4j.Logger.getLogger(ClientServImpl.class);
+            org.apache.log4j.Logger.getLogger(LoginController.class);
     private WorkerServ workerServ;
 
     public void init() throws ServletException {
         ApplicationContext applicationContext = (ApplicationContext) getServletContext().getAttribute("spring-context");
-        WorkerServ workerServ = applicationContext.getBean(WorkerServ.class);
+        workerServ = applicationContext.getBean(WorkerServ.class);
+        LOGGER.info("worker service created info login controller servlet");
 
         super.init();
     }
@@ -33,20 +34,17 @@ public class LoginController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String login = req.getParameter("login");
+        LOGGER.info(login.toString()+" from do post() login controller");
         String pass = req.getParameter("pass");
+        LOGGER.info(pass.toString()+" from do post() login controller");
         PrintWriter printWriter = resp.getWriter();
-      /*  try {*/
-            String accessToken = workerServ.login(login, pass);
-            Worker worker = workerServ.getWorker(accessToken);
-            LOGGER.info("worker login controller: " +worker.toString()+" in system!");
-        req.getRequestDispatcher("index.html").forward(req,resp);
+
+        String accessToken = workerServ.login(login, pass);
+        LOGGER.info(accessToken.toString()+" accessToken info from do post() login controller");
+        Worker worker = workerServ.getWorker(accessToken);
+        LOGGER.info("worker login controller: " + worker.toString() + " in system!");
+        req.getRequestDispatcher("/WEB-INF/pages/workerMenu.jsp").forward(req, resp);
         printWriter.flush();
-
-
-/*
-        }catch (NoWorkerFoundException e){
-            LOGGER.info("no use found");
-        };*/
 
 
     }
