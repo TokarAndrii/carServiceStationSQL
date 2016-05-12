@@ -43,7 +43,13 @@ public class LoginController extends HttpServlet {
         LOGGER.info(accessToken.toString()+" accessToken info from do post() login controller");
         Worker worker = workerServ.getWorker(accessToken);
         LOGGER.info("worker login controller: " + worker.toString() + " in system!");
-        req.getRequestDispatcher("/WEB-INF/pages/workerMenu.jsp").forward(req, resp);
+
+        if(worker.getWorkerTypes()==WorkerTypes.ADMINISTRATOR){
+            req.getRequestDispatcher("/WEB-INF/pages/administratorMenu.jsp").forward(req, resp);
+        }
+        else {
+            req.getRequestDispatcher("/WEB-INF/pages/workerMenu.jsp").forward(req,resp);
+        }
         printWriter.flush();
 
 

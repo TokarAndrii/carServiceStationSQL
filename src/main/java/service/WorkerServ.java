@@ -26,7 +26,7 @@ public interface WorkerServ {
 
     List<Worker> findAllworkers (String login, String pass);
 
-    Worker getWorkerById (long workerId,String login, String pass);
+    Worker getWorkerById (long workerId);
 
     Worker getWorkerBySecondName(String workerSecondName, String login, String pass);
 

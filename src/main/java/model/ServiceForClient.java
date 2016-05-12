@@ -10,12 +10,13 @@ import java.util.List;
 @Table(name = "services")
 public class ServiceForClient extends IdEntity {
 
-    @Column(nullable = false)
+    @Column(nullable = true)
     @Enumerated(EnumType.STRING)
     private ServiceTypes serviceTypes;
 
-    @Column(nullable = false)
-    private Time timeToDo;
+    @Column(nullable = true)
+    @Enumerated(EnumType.STRING)
+    private StoreGoodsTypes storeGoodsTypes;
 
     @Column(nullable = false)
     private Date startDate;
@@ -31,23 +32,54 @@ public class ServiceForClient extends IdEntity {
     private Client client;
 
 
-
     @ManyToMany
-    @JoinTable(name = "clients_workers", joinColumns = @JoinColumn(name = "worker_id",referencedColumnName = "id"),
-            inverseJoinColumns = @JoinColumn(name = "serviceForClient_id",referencedColumnName = "id"))
+    @JoinTable(name = "clients_workers", joinColumns = @JoinColumn(name = "worker_id", referencedColumnName = "id"),
+            inverseJoinColumns = @JoinColumn(name = "serviceForClient_id", referencedColumnName = "id"))
     private List<Worker> workers;
 
 
     public ServiceForClient() {
     }
 
-    public ServiceForClient(ServiceTypes serviceTypes, Time timeToDo,
-                            Date startDate, long priceOfService, Client client) {
+ /*   public ServiceForClient(ServiceTypes serviceTypes, StoreGoodsTypes storeGoodsTypes, Time timeToDo, Date startDate, Date finishDate,
+                            long priceOfService, Client client, List<Worker> workers) {
         this.serviceTypes = serviceTypes;
+        this.storeGoodsTypes = storeGoodsTypes;
         this.timeToDo = timeToDo;
         this.startDate = startDate;
+        this.finishDate = finishDate;
         this.priceOfService = priceOfService;
         this.client = client;
+        this.workers = workers;
+    }*/
+
+    public ServiceForClient(StoreGoodsTypes storeGoodsTypes, Date startDate, Date finishDate,
+                            long priceOfService, Client client, List<Worker> workers) {
+        this.storeGoodsTypes = storeGoodsTypes;
+        //this.timeToDo = timeToDo;
+        this.startDate = startDate;
+        this.finishDate = finishDate;
+        this.priceOfService = priceOfService;
+        this.client = client;
+        this.workers = workers;
+    }
+
+    public ServiceForClient(ServiceTypes serviceTypes, Date startDate, Date finishDate, long priceOfService, Client client, List<Worker> workers) {
+        this.serviceTypes = serviceTypes;
+        //this.timeToDo = timeToDo;
+        this.startDate = startDate;
+        this.finishDate = finishDate;
+        this.priceOfService = priceOfService;
+        this.client = client;
+        this.workers = workers;
+    }
+
+    public StoreGoodsTypes getStoreGoodsTypes() {
+        return storeGoodsTypes;
+    }
+
+    public void setStoreGoodsTypes(StoreGoodsTypes storeGoodsTypes) {
+        this.storeGoodsTypes = storeGoodsTypes;
     }
 
     public ServiceTypes getServiceTypes() {
@@ -58,13 +90,13 @@ public class ServiceForClient extends IdEntity {
         this.serviceTypes = serviceTypes;
     }
 
-    public Time getTimeToDo() {
+    /*public Time getTimeToDo() {
         return timeToDo;
     }
 
     public void setTimeToDo(Time timeToDo) {
         this.timeToDo = timeToDo;
-    }
+    }*/
 
     public long getPriceOfService() {
         return priceOfService;
@@ -86,9 +118,9 @@ public class ServiceForClient extends IdEntity {
         return workers;
     }
 
-    public void setWorkers(List<Worker> workers) {
+    /*public void setWorkers(List<Worker> workers) {
         this.workers = workers;
-    }
+    }*/
 
     public Date getStartDate() {
         return startDate;
@@ -126,11 +158,10 @@ public class ServiceForClient extends IdEntity {
     public String toString() {
         return "ServiceForClient{" +
                 "serviceTypes=" + serviceTypes +
-                ", timeToDo=" + timeToDo +
+                ", storeGoodsTypes=" + storeGoodsTypes +
                 ", startDate=" + startDate +
                 ", finishDate=" + finishDate +
                 ", priceOfService=" + priceOfService +
                 '}';
     }
-
 }

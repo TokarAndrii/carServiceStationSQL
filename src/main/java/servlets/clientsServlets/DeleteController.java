@@ -60,7 +60,7 @@ public class DeleteController extends HttpServlet {
 
         System.out.println("delete info from deleter servlet");
 
-        req.getRequestDispatcher("/index.html").
+        req.getRequestDispatcher("/test33.html").
                 forward(req, resp);
         printWriter.flush();
 

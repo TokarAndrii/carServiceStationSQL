@@ -9,57 +9,58 @@
 <html>
 <head>
     <title>Вход в личный кабинет</title>
-  <meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
 </head>
 
 
 <div id="tokar_container_header">
-  <p class="headerLogin">
-    <span id="loginClientForm">Вход в личный кабинет сотудника</span>
-                <span><img src="images/serviceCenterLogo.jpg" class="img-thumbnail" alt="logo"
-                           style="width: 85px; height: 85px;float:right"/></span>
-  </p>
+    <p class="headerLogin">
+
+        <span id="loginClientForm">Вход в личный кабинет клиента</span>
+                <span><a href="index.html"> <img src="images/serviceCenterLogo.jpg" class="img-thumbnail" alt="logo"
+                                                 style="width: 85px; height: 85px;float:right"/></a></span>
+    </p>
 
 </div>
+<br>
 <br>
 <br>
 
 <div class="login form">
 
-  <form class="form-horizontal" action="loginForWorker" method="post">
-    <div class="form-group">
-      <label class="control-label col-sm-2">Login:</label>
+    <form class="form-horizontal" action="loginForWorker" method="post">
+        <div class="form-group">
+            <label class="control-label col-sm-2">Login:</label>
 
-      <div class="col-sm-10">
-        <input class="form-control" name="login" type="text" placeholder="Enter Login">
+            <div class="col-sm-10">
+                <input class="form-control" name="login" type="text" placeholder="Enter Login" required>
 
-      </div>
-    </div>
+            </div>
+        </div>
 
 
-    <div class="form-group">
-      <label class="control-label col-sm-2">Pass:</label>
+        <div class="form-group">
+            <label class="control-label col-sm-2">Pass:</label>
 
-      <div class="col-sm-10">
-        <input class="form-control" name="pass" type="password" placeholder="Enter password">
-      </div>
-    </div>
+            <div class="col-sm-10">
+                <input class="form-control" name="pass" type="password" placeholder="Enter password" required>
+            </div>
+        </div>
 
-    <div class="form-group">
-      <div class="col-sm-offset-2 col-sm-10">
-        <button type="submit" class="btn btn-default">Submit</button>
-      </div>
-    </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-default">Submit</button>
+            </div>
+        </div>
 
-  </form>
+    </form>
 </div>
-
 
 
 </body>

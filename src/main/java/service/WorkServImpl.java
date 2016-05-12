@@ -66,8 +66,7 @@ public class WorkServImpl implements WorkerServ {
 
             if (workerList.size() != 0 && workerList != null) {
                 return workerList.get(0);
-            }
-            else {
+            } else {
                 String accessToken = StringUtils.generateRandomToken(ACCESS_TOKEN_LENGHT);
                 accessTokenMap.put(accessToken, admin);
                 return workerDaoJPA.create(admin);
@@ -154,9 +153,9 @@ public class WorkServImpl implements WorkerServ {
     }
 
     @Override
-    public Worker getWorkerById(long workerId, String login, String pass) {
+    public Worker getWorkerById(long workerId) {
 
-        return null;
+        return workerDaoJPA.findById(workerId);
     }
 
     @Override

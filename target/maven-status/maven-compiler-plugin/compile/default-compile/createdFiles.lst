@@ -9,6 +9,7 @@ util/PropertyLoader.class
 dao/ServiceForClientDaoJPAImpl.class
 dao/ServiceForClientDao.class
 exeption/NoWorkerFoundException.class
+servlets/servicecForClientsServlets/AddServiceForClientController.class
 util/ClassNameUtil.class
 model/Client.class
 model/ServiceTypes.class

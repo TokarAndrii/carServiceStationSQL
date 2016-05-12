@@ -25,8 +25,16 @@
 <div id="workerCabinetMenu">
     <ul>
 
-        <li>Add product</li>
-        <li>Add client</li>
+        <li> <a href="addSFC.jsp">Add service</a></li>
+        <li><a href="#">Update service</a></li>
+        <li><a href="#">Remove service from Time-table</a></li>
+        <li><a href="#">Confirm of service have done</a></li>
+        <br>
+
+        <li><a href="#">Add client</a></li>
+        <li><a href="#">Update client data</a></li>
+        <br>
+        <li><a href="#">See Time-table for some period</a></li>
 
     </ul>
 

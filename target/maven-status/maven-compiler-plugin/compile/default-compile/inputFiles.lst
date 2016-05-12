@@ -36,6 +36,7 @@
 /home/tokarandrii/IdeaProjects/carServiceStation/src/main/java/exeption/MyValidationException.java
 /home/tokarandrii/IdeaProjects/carServiceStation/src/main/java/model/Worker.java
 /home/tokarandrii/IdeaProjects/carServiceStation/src/main/java/dao/WorkerDaoJPAImpl.java
+/home/tokarandrii/IdeaProjects/carServiceStation/src/main/java/servlets/servicecForClientsServlets/AddServiceForClientController.java
 /home/tokarandrii/IdeaProjects/carServiceStation/src/main/java/pages/CarServStation.java
 /home/tokarandrii/IdeaProjects/carServiceStation/src/main/java/service/ServiceForClientServImpl.java
 /home/tokarandrii/IdeaProjects/carServiceStation/src/main/java/servlets/clientsServlets/DeleteController.java
