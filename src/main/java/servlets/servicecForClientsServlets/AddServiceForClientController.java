@@ -34,7 +34,7 @@ public class AddServiceForClientController extends HttpServlet {
     private ClientServ clientServ;
     private Worker worker;
     private WorkerServ workerServ;
-    private List<Worker> workersList;
+    //private List<Worker> workersList;
 
 
     @Override
@@ -59,15 +59,17 @@ public class AddServiceForClientController extends HttpServlet {
         PrintWriter printWriter = resp.getWriter();
         Date startDate = null;
         Date finishDate = null;
-        workersList = new LinkedList<Worker>();
-        //long price = 0;
+        //workersList = new LinkedList<Worker>();
 
-       long price = Long.parseLong(req.getParameter("price")) ;
+
+        String priceString = req.getParameter("price");
+        long price = Long.parseLong(priceString);
+
         //TODO parsing string if not just one id of worker
         String idWorkerString = req.getParameter("workersID");
         long workerID =
                 Long.parseLong(idWorkerString);
-        workersList.add(workerServ.getWorkerById(workerID));
+        worker = workerServ.getWorkerById(workerID);
 
 
 
@@ -105,7 +107,7 @@ public class AddServiceForClientController extends HttpServlet {
 
 
 
-            serviceForClient = serviceForClientServ.orderService(null, storeGoodsTypes, startDate, finishDate, price, client, workersList);
+            serviceForClient = serviceForClientServ.orderService(null, storeGoodsTypes, startDate, finishDate, price, client, worker);
             LOGGER.info(serviceForClient.toString() + "-->>service for client(type: store goods) info: AddServiceForClientController");
             req.setAttribute("serviceForClient", serviceForClient);
 
@@ -145,10 +147,10 @@ public class AddServiceForClientController extends HttpServlet {
             Long clientId = Long.parseLong(idClientString);
             client = clientServ.getClient(clientId);
 
-            //String idWorkerString = req.getParameter("workerId");
 
 
-            serviceForClient = serviceForClientServ.orderService(serviceTypes, null, startDate, finishDate, price, client, workersList);
+
+            serviceForClient = serviceForClientServ.orderService(serviceTypes, null, startDate, finishDate, price, client, worker);
             LOGGER.info(serviceForClient.toString() + "-->>service for client(type: service type) info: AddServiceForClientController");
             req.setAttribute("serviceForClient", serviceForClient);
 
@@ -157,7 +159,7 @@ public class AddServiceForClientController extends HttpServlet {
             LOGGER.info("WRONG TYPE OF SERVICE OR GOODS FOR CLIENT -->> INFO from doPost in AddServiceForClientController!!! ");
         }
 
-        req.getRequestDispatcher("webapp/workerCabinet.jsp").forward(req, resp);
+        req.getRequestDispatcher("workerCabinet.jsp").forward(req, resp);
         printWriter.flush();
 
     }

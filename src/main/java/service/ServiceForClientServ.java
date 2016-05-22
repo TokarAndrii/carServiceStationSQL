@@ -9,7 +9,7 @@ import java.util.List;
 public interface ServiceForClientServ {
 
     ServiceForClient orderService(ServiceTypes serviceTypes, StoreGoodsTypes storeGoodsTypes,
-                                  Date startDate,Date finishDate, long priceOfService, Client client, List workersId);
+                                  Date startDate,Date finishDate, long priceOfService, Client client, Worker worker);
 
 
 
@@ -24,6 +24,8 @@ public interface ServiceForClientServ {
     ServiceForClient findById (long idServiceForClient);
 
     long totalValueOfSFCforPeriod (Date dateFrom, Date dateTo);
+
+    boolean addRelatives(Worker worker, Client client, ServiceForClient serviceForClient);
 
 
 }

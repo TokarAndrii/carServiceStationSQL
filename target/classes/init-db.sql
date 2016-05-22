@@ -5,7 +5,7 @@ use tokarServiceStation;
 DROP TABLE IF EXISTS clients;
 DROP TABLE IF EXISTS workers;
 DROP TABLE IF EXISTS services;
-DROP TABLE IF EXISTS workers_services;
+DROP TABLE IF EXISTS workers_clients;
 
 
 
@@ -33,13 +33,13 @@ workerTypes ENUM(MASTER_OF_REPAIR_1_KATEGORY, MASTER_OF_REPAIR_2_KATEGORY, MASTE
                  WASHER_WORKER,SECRETARY, ADMINISTRATOR)
 );
 
-CREATE TABLE workers_services(
-id_workerServices BIGINT AUTO_INCREMENT,
+CREATE TABLE workers_clients(
+id_workersClients BIGINT AUTO_INCREMENT,
 worker_id BIGINT,
-service_id BIGINT,
-PRIMARY KEY (id_workerServices),
-FOREIGN KEY (worker_id) REFERENCES workers (worker_id),
-FOREIGN KEY (service_id) REFERENCES services(service_id)
+client_id BIGINT,
+PRIMARY KEY (id_workersClients),
+FOREIGN KEY (worker_id) REFERENCES workers (id),
+FOREIGN KEY (client_id) REFERENCES clients(id)
 );
 
 CREATE TABLE services(
@@ -52,7 +52,7 @@ storeGoodTypes ENUM(SPARE_PARTS, CONSUMABLES,SOUVENIRS,   TIRES),
 startDate DATETIME,
 finishDate DATETIME,
 priceOfService DOUBLE NOT NULL,
-client_id FLOAT,
+client_id BIGINT,
 FOREIGN KEY (client_id) REFERENCES clients(id),
 PRIMARY KEY (service_id)
 

@@ -1,9 +1,6 @@
 package model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.List;
 
 @Entity
@@ -11,25 +8,40 @@ import java.util.List;
 public class Client extends IdEntity {
     @Column(nullable = false)
     private String firstName;
+
     @Column(nullable = false)
     private String secondName;
+
     @Column(nullable = false)
     private String phoneNumber;
+
     @Column
     private String email;
+
     @Column(nullable = false)
     private String driverLicenseNumber;
 
-    @Column
-    @OneToMany(mappedBy = "client")
+
+    @OneToMany(mappedBy = "client", fetch = FetchType.EAGER)
     private List<ServiceForClient> services;
 
+    @Column
     private String pass;
+
+    @ManyToMany(mappedBy = "clientList", cascade = CascadeType.ALL)
+    private List<Worker> workerList;
 
 
     public Client() {
     }
 
+    public List<Worker> getWorkerList() {
+        return workerList;
+    }
+
+    public void setWorkerList(List<Worker> workerList) {
+        this.workerList = workerList;
+    }
 
     public Client(String firstName, String secondName,
                   String phoneNumber, String email,
@@ -105,22 +117,7 @@ public class Client extends IdEntity {
         this.driverLicenseNumber = driverLicenseNumber;
     }
 
-  /*  public boolean addService(ServiceForClient serviceForClient) {
-        if (serviceForClient != null) {
-            services.add(serviceForClient);
-            return true;
-        }
-        return false;
-    }
 
-    public boolean removeService(ServiceForClient serviceForClient) {
-        if (services.contains(serviceForClient) && serviceForClient != null) {
-            services.remove(serviceForClient);
-            return true;
-        }
-        return false;
-    }
-*/
     @Override
 
     public String toString() {
@@ -132,4 +129,26 @@ public class Client extends IdEntity {
                 ", driverLicenseNumber='" + driverLicenseNumber + '\'' +
                 '}';
     }
+
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

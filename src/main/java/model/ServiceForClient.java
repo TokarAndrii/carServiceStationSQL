@@ -32,46 +32,34 @@ public class ServiceForClient extends IdEntity {
     private Client client;
 
 
-    @ManyToMany
-    @JoinTable(name = "clients_workers", joinColumns = @JoinColumn(name = "worker_id", referencedColumnName = "id"),
-            inverseJoinColumns = @JoinColumn(name = "serviceForClient_id", referencedColumnName = "id"))
-    private List<Worker> workers;
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "worker_id", referencedColumnName = "id")
+    private Worker worker;
 
 
     public ServiceForClient() {
     }
 
- /*   public ServiceForClient(ServiceTypes serviceTypes, StoreGoodsTypes storeGoodsTypes, Time timeToDo, Date startDate, Date finishDate,
-                            long priceOfService, Client client, List<Worker> workers) {
-        this.serviceTypes = serviceTypes;
-        this.storeGoodsTypes = storeGoodsTypes;
-        this.timeToDo = timeToDo;
-        this.startDate = startDate;
-        this.finishDate = finishDate;
-        this.priceOfService = priceOfService;
-        this.client = client;
-        this.workers = workers;
-    }*/
 
     public ServiceForClient(StoreGoodsTypes storeGoodsTypes, Date startDate, Date finishDate,
-                            long priceOfService, Client client, List<Worker> workers) {
+                            long priceOfService, Client client, Worker worker) {
         this.storeGoodsTypes = storeGoodsTypes;
-        //this.timeToDo = timeToDo;
+
         this.startDate = startDate;
         this.finishDate = finishDate;
         this.priceOfService = priceOfService;
         this.client = client;
-        this.workers = workers;
+        this.worker = worker;
     }
 
-    public ServiceForClient(ServiceTypes serviceTypes, Date startDate, Date finishDate, long priceOfService, Client client, List<Worker> workers) {
+    public ServiceForClient(ServiceTypes serviceTypes, Date startDate, Date finishDate, long priceOfService, Client client, Worker worker) {
         this.serviceTypes = serviceTypes;
-        //this.timeToDo = timeToDo;
+
         this.startDate = startDate;
         this.finishDate = finishDate;
         this.priceOfService = priceOfService;
         this.client = client;
-        this.workers = workers;
+        this.worker = worker;
     }
 
     public StoreGoodsTypes getStoreGoodsTypes() {
@@ -90,13 +78,6 @@ public class ServiceForClient extends IdEntity {
         this.serviceTypes = serviceTypes;
     }
 
-    /*public Time getTimeToDo() {
-        return timeToDo;
-    }
-
-    public void setTimeToDo(Time timeToDo) {
-        this.timeToDo = timeToDo;
-    }*/
 
     public long getPriceOfService() {
         return priceOfService;
@@ -114,13 +95,13 @@ public class ServiceForClient extends IdEntity {
         this.client = client;
     }
 
-    public List<Worker> getWorkers() {
-        return workers;
+    public Worker getWorker() {
+        return worker;
     }
 
-    /*public void setWorkers(List<Worker> workers) {
-        this.workers = workers;
-    }*/
+    public void setWorker(Worker worker) {
+        this.worker = worker;
+    }
 
     public Date getStartDate() {
         return startDate;
@@ -138,21 +119,6 @@ public class ServiceForClient extends IdEntity {
         this.finishDate = finishDate;
     }
 
-    public boolean addWorker(Worker worker) {
-        if (worker != null) {
-            workers.add(worker);
-            return true;
-        }
-        return false;
-    }
-
-    public boolean removeWorker(Worker worker) {
-        if (worker != null && workers.contains(worker)) {
-            workers.remove(worker);
-            return true;
-        }
-        return false;
-    }
 
     @Override
     public String toString() {
@@ -164,4 +130,6 @@ public class ServiceForClient extends IdEntity {
                 ", priceOfService=" + priceOfService +
                 '}';
     }
+
+
 }

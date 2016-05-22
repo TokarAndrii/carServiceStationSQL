@@ -16,9 +16,7 @@
         <class>dao.ClientDaoJPAImpl</class>
         <class>dao.WorkerDaoJPAImpl</class>
         <class>dao.ServiceForClientDaoJPAImpl</class>
-        <!--<class>model.ServiceTypes</class>
-        <class>model.WorkerTypes</class>
-        <class>model.StoreGoodsTypes</class>-->
+
 
         <properties>
             <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>

@@ -30,31 +30,6 @@ public class WorkServImpl implements WorkerServ {
     public WorkServImpl() {
     }
 
-    /*  public WorkServImpl() {
-        Worker found = null;
-        try {
-            found = workerDaoJPA.findById(1);
-        } catch (NoWorkerFoundException e) {
-            e.printStackTrace();
-        }
-        if (found == null) {
-            Admin admin = new Admin("admin", WorkerTypes.ADMINISTRATOR, "firstNameAdm", "secondNameAdm", 10000, "admin");
-        }
-        else {
-            System.out.println("admin exist already in Data Base");
-        }
-
-*/
-
-
-       /* Admin admin;
-        Worker administrator = Admin.getInstance();
-        if (administrator == null) {
-            admin = new Admin();
-        }
-
-        Worker worker = workerDaoJPA.findBySecondName(admin.getSecondName());*/
-
 
     @Override
     public Worker register(String firstName, String secondName, long salary, WorkerTypes workerTypes,

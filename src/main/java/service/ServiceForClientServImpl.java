@@ -10,10 +10,7 @@ import org.springframework.stereotype.Component;
 import util.StringUtils;
 
 import java.sql.Time;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 
 @Component
@@ -28,9 +25,16 @@ public class ServiceForClientServImpl implements ServiceForClientServ {
 
     private Map<String, ServiceForClient> accessTokenMap = new ConcurrentHashMap<>();
 
-    private ArrayList<Worker> workers;
+
+    private Worker worker;
 
     private WorkerServ workerServ;
+
+    private Client client;
+
+    private ClientServ clientServ;
+
+    //private ServiceForClient serviceForClient;
 
 
     public static final int ACCESS_TOKEN_LENGHT = 12;
@@ -38,53 +42,38 @@ public class ServiceForClientServImpl implements ServiceForClientServ {
     public ServiceForClientServImpl() {
     }
 
-    /*public ServiceForClientServImpl(WorkerDao workerDao) {
-        this.workerDao = workerDao;
-    }*/
+    private ServiceForClient serviceForClient = null;
 
     @Override
-    public ServiceForClient orderService(ServiceTypes serviceTypes, StoreGoodsTypes storeGoodsTypes,
-                                         Date startDate, Date finishDate, long priceOfService, Client client, List workersID) {
+    public ServiceForClient orderService(ServiceTypes serviceTypes, StoreGoodsTypes storeGoodsTypes, Date startDate,
+                                         Date finishDate, long priceOfService, Client client, Worker worker) {
+
+
         if (serviceTypes == null && storeGoodsTypes == null) {
-            System.out.println("Enter serviceTypes or storeGoodsTypes, because now all of them null!!!!! ");
+
+            LOGGER.info("Enter serviceTypes or storeGoodsTypes, because now all of them are null!!!!! ");
             return null;
         } else if (serviceTypes == null && storeGoodsTypes != null) {
-            if (workersID != null && workersID.size() != 0) {
-                for (int i = 0; i < workersID.size(); i++) {
-                    int workerId = (int) workersID.get(i);
-                    Worker worker = workerServ.getWorkerById(workerId);
-                    workers.add(worker);
-                }
-                ServiceForClient serviceForClient = new ServiceForClient(storeGoodsTypes,
-                        startDate, finishDate, priceOfService, client, workers);
-                String randomToken = StringUtils.generateRandomToken(ACCESS_TOKEN_LENGHT);
-                accessTokenMap.put(randomToken, serviceForClient);
 
-                serviceForClientDaoJPA.start(serviceForClient);
+            ServiceForClient serviceForClient = new ServiceForClient(storeGoodsTypes,
+                    startDate, finishDate, priceOfService, client, worker);
+            //addRelatives(worker,client,serviceForClient);
 
-                return serviceForClientDaoJPA.start(serviceForClient);
-            }
+            return serviceForClientDaoJPA.start(serviceForClient, worker, client);
 
 
         } else if (storeGoodsTypes == null && serviceTypes != null) {
-           /* if (workersID != null && workersID.size() != 0) {
-                for (int i = 0; i < workersID.size(); i++) {
-                    int workerId = (int) workersID.get(i);
-                    Worker worker = workerServ.getWorkerById(workerId);
-                    workers.add(worker);
-                }
-            }*/
-            ServiceForClient serviceForClient = new ServiceForClient(serviceTypes,
-                    startDate, finishDate, priceOfService, client, workers);
-            String randomToken = StringUtils.generateRandomToken(ACCESS_TOKEN_LENGHT);
-            accessTokenMap.put(randomToken, serviceForClient);
-            //serviceForClientDaoJPA.start(serviceForClient);
 
-            LOGGER.info(serviceForClient.toString() +" after start() in ServiceForClientServ");
-            return serviceForClientDaoJPA.start(serviceForClient);
+            ServiceForClient serviceForClient = new ServiceForClient(serviceTypes,
+                    startDate, finishDate, priceOfService, client, worker);
+            //addRelatives(worker, client, serviceForClient);
+
+
+            return serviceForClientDaoJPA.start(serviceForClient, worker, client);
 
 
         }
+
         LOGGER.info("serviceTypes and storeGoodsTypes both have values, choose just one of them!!!");
         return null;
     }
@@ -117,5 +106,49 @@ public class ServiceForClientServImpl implements ServiceForClientServ {
     @Override
     public long totalValueOfSFCforPeriod(Date dateFrom, Date dateTo) {
         return 0;
+    }
+
+  /*  @Override
+    public boolean addRelatives(Worker worker, Client client, ServiceForClient serviceForClient) {
+        if (client != null & worker != null) {
+
+            worker.getServiceForClients().add(serviceForClient);
+            worker.getClientList().add(client);
+            client.getWorkerList().add(worker);
+            client.getServices().add(serviceForClient);
+
+            serviceForClient.setClient(client);
+            serviceForClient.setWorker(worker);
+
+            LOGGER.info("Client and Worker right inserted in SFC Service");
+            return true;
+        }
+        LOGGER.info("Client and Worker inserted not right!!!!! Info: SFC Service");
+        return false;
+    }*/
+
+    @Override
+    public boolean addRelatives(Worker worker, Client client, ServiceForClient serviceForClient) {
+        List<ServiceForClient> serviceForClients = new LinkedList<>();
+        serviceForClients.add(serviceForClient);
+        worker.setServiceForClients(serviceForClients);
+
+        List<Client> clientList = new LinkedList<>();
+        clientList.add(client);
+        worker.setClientList(clientList);
+
+        List<Worker> workerList = new LinkedList<>();
+        workerList.add(worker);
+        client.setWorkerList(workerList);
+
+        List<ServiceForClient> forClientList = new LinkedList<>();
+        forClientList.add(serviceForClient);
+        client.setServices(forClientList);
+
+        serviceForClient.setWorker(worker);
+        serviceForClient.setClient(client);
+
+
+        return false;
     }
 }

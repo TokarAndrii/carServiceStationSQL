@@ -1,7 +1,10 @@
 package dao;
 
 import exeption.NoServiceTypeFoundException;
+import model.Client;
 import model.ServiceForClient;
+import model.StoreGoodsTypes;
+import model.Worker;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -10,7 +13,9 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Query;
 import java.util.Date;
+import java.util.LinkedList;
 import java.util.List;
+
 @Component("serviceForClientDaoJPA")
 public class ServiceForClientDaoJPAImpl implements ServiceForClientDao {
 
@@ -20,22 +25,63 @@ public class ServiceForClientDaoJPAImpl implements ServiceForClientDao {
     public ServiceForClientDaoJPAImpl() {
     }
 
-    public ServiceForClientDaoJPAImpl(EntityManagerFactory factory){
-        this.factory=factory;
+    public ServiceForClientDaoJPAImpl(EntityManagerFactory factory) {
+        this.factory = factory;
     }
 
     @Override
-    public ServiceForClient start(ServiceForClient serviceForClient) {
+    public ServiceForClient start(ServiceForClient serviceForClient, Worker worker, Client client) {
+
 
         EntityManager manager = factory.createEntityManager();
         EntityTransaction transaction = manager.getTransaction();
 
+        long clientId = client.getId();
+        Client client2=manager.find(Client.class, clientId);
+        /*Query query = manager.createQuery("SELECT u FROM Client u WHERE u.id = :clientId");
+        List<Client> clientList = query.getResultList();
+        Client client1 = clientList.get(0);*/
+
+
+        long workerId = worker.getId();
+        Worker worker2=manager.find(Worker.class,workerId);
+        /*Query query2 = manager.createQuery("SELECT w FROM Worker w WHERE w.id = :workerId");
+        List<Worker> workerList = query2.getResultList();
+        Worker worker1 = workerList.get(0);
+*/
+        List<ServiceForClient> serviceForClients = new LinkedList<>();
+        serviceForClients.add(serviceForClient);
+        worker.setServiceForClients(serviceForClients);
+
+        List<Client> clientsList = new LinkedList<>();
+        clientsList.add(client2);
+        worker.setClientList(clientsList);
+
+        List<Worker> workersList = new LinkedList<>();
+        workersList.add(worker2);
+        client.setWorkerList(workersList);
+
+        List<ServiceForClient> forClientList = new LinkedList<>();
+        forClientList.add(serviceForClient);
+        client.setServices(forClientList);
+
+        serviceForClient.setWorker(worker2);
+        serviceForClient.setClient(client2);
+
+
+
+
+
         try {
             transaction.begin();
+            manager.merge(client2);
+            manager.merge(worker2);
+
             manager.persist(serviceForClient);
             transaction.commit();
             System.out.println("service for client " + serviceForClient.toString() + " starting!!");
         } catch (Exception e) {
+            e.printStackTrace();
             transaction.rollback();
         }
 
@@ -51,6 +97,7 @@ public class ServiceForClientDaoJPAImpl implements ServiceForClientDao {
 
         try {
             transaction.begin();
+
             manager.persist(serviceForClient);
             transaction.commit();
             System.out.println("service for client " + serviceForClient.toString() + " finished!!");

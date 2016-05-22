@@ -44,10 +44,8 @@
 /home/tokarandrii/IdeaProjects/carServiceStation/src/main/java/service/WorkServImpl.java
 /home/tokarandrii/IdeaProjects/carServiceStation/src/main/java/util/ConfigData.java
 /home/tokarandrii/IdeaProjects/carServiceStation/src/main/java/pages/Page.java
-/home/tokarandrii/IdeaProjects/carServiceStation/src/main/java/model/WorkDairy.java
 /home/tokarandrii/IdeaProjects/carServiceStation/src/main/java/service/ServiceForClientServ.java
 /home/tokarandrii/IdeaProjects/carServiceStation/src/main/java/service/ClientServImpl.java
-/home/tokarandrii/IdeaProjects/carServiceStation/src/main/java/model/GoodsForSale.java
 /home/tokarandrii/IdeaProjects/carServiceStation/src/main/java/exeption/NoWorkerFoundException.java
 /home/tokarandrii/IdeaProjects/carServiceStation/src/main/java/servlets/workerServlets/LoginController.java
 /home/tokarandrii/IdeaProjects/carServiceStation/src/main/java/pages/ClientLoginPage.java

@@ -18,17 +18,12 @@
 
 
     <context:annotation-config/>
-    <!-- scanning only in model and dao-->
-    <!-- <context:component-scan base-package="view"/>-->
+
     <context:component-scan base-package="service"/>
     <context:component-scan base-package="stationCarTokar"/>
     <context:component-scan base-package="dao"/>
 
 
-    <!--<context:component-scan base-package="service"/>
-
-
--->
     <bean name="admin" class="model.Admin">
         <property name="firstName" value="testAdminFirstName"/>
         <property name="secondName" value="testAdminSecondName"/>
@@ -60,7 +55,6 @@
     </bean>
 
 
-    <!--<bean class="aspect.ClientDaoAspect"/> -->
 
 
 </beans>

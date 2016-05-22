@@ -26,13 +26,16 @@ public class Worker  extends IdEntity {
     @Enumerated(EnumType.STRING)
     private WorkerTypes workerTypes;
 
-    @Column
-    @ManyToMany(mappedBy = "workers")
+
+    @OneToMany(mappedBy = "worker", fetch = FetchType.EAGER)
     private List<ServiceForClient> serviceForClients;
 
+    @ManyToMany(fetch = FetchType.LAZY)
+    @JoinTable(name = "workers_clients",
+            joinColumns = {@JoinColumn(name = "worker_id", referencedColumnName = "id")},
+            inverseJoinColumns = {@JoinColumn(name = "client_id", referencedColumnName = "id")})
+    private List<Client> clientList;
 
-
-    //TODO when will create time-table workday calendar - private boolean workStatusBusy = true;
 
     public Worker() {
     }
@@ -114,6 +117,14 @@ public class Worker  extends IdEntity {
         this.serviceForClients = serviceForClients;
     }
 
+    public List<Client> getClientList() {
+        return clientList;
+    }
+
+    public void setClientList(List<Client> clientList) {
+        this.clientList = clientList;
+    }
+
     @Override
     public String toString() {
         return "Worker{" +
@@ -123,4 +134,7 @@ public class Worker  extends IdEntity {
                 ", workerTypes=" + workerTypes +
                 '}';
     }
+
+
+
 }
