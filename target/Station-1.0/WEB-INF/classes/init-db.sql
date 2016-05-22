@@ -34,10 +34,10 @@ workerTypes ENUM(MASTER_OF_REPAIR_1_KATEGORY, MASTER_OF_REPAIR_2_KATEGORY, MASTE
 );
 
 CREATE TABLE workers_clients(
-id_workersClients BIGINT AUTO_INCREMENT,
+/*id_workersClients BIGINT AUTO_INCREMENT,*/
 worker_id BIGINT,
 client_id BIGINT,
-PRIMARY KEY (id_workersClients),
+/*PRIMARY KEY (id_workersClients),*/
 FOREIGN KEY (worker_id) REFERENCES workers (id),
 FOREIGN KEY (client_id) REFERENCES clients(id)
 );
@@ -54,6 +54,7 @@ finishDate DATETIME,
 priceOfService DOUBLE NOT NULL,
 client_id BIGINT,
 FOREIGN KEY (client_id) REFERENCES clients(id),
+FOREIGN KEY (worker_id) REFERENCES workers(id),
 PRIMARY KEY (service_id)
 
 );

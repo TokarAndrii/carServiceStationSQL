@@ -56,8 +56,8 @@ public class ServiceForClientServImpl implements ServiceForClientServ {
         } else if (serviceTypes == null && storeGoodsTypes != null) {
 
             ServiceForClient serviceForClient = new ServiceForClient(storeGoodsTypes,
-                    startDate, finishDate, priceOfService, client, worker);
-            //addRelatives(worker,client,serviceForClient);
+
+            startDate, finishDate, priceOfService, client, worker);
 
             return serviceForClientDaoJPA.start(serviceForClient, worker, client);
 
@@ -66,7 +66,7 @@ public class ServiceForClientServImpl implements ServiceForClientServ {
 
             ServiceForClient serviceForClient = new ServiceForClient(serviceTypes,
                     startDate, finishDate, priceOfService, client, worker);
-            //addRelatives(worker, client, serviceForClient);
+
 
 
             return serviceForClientDaoJPA.start(serviceForClient, worker, client);
@@ -108,24 +108,6 @@ public class ServiceForClientServImpl implements ServiceForClientServ {
         return 0;
     }
 
-  /*  @Override
-    public boolean addRelatives(Worker worker, Client client, ServiceForClient serviceForClient) {
-        if (client != null & worker != null) {
-
-            worker.getServiceForClients().add(serviceForClient);
-            worker.getClientList().add(client);
-            client.getWorkerList().add(worker);
-            client.getServices().add(serviceForClient);
-
-            serviceForClient.setClient(client);
-            serviceForClient.setWorker(worker);
-
-            LOGGER.info("Client and Worker right inserted in SFC Service");
-            return true;
-        }
-        LOGGER.info("Client and Worker inserted not right!!!!! Info: SFC Service");
-        return false;
-    }*/
 
     @Override
     public boolean addRelatives(Worker worker, Client client, ServiceForClient serviceForClient) {

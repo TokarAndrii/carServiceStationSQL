@@ -38,32 +38,27 @@ public class ServiceForClientDaoJPAImpl implements ServiceForClientDao {
 
         long clientId = client.getId();
         Client client2=manager.find(Client.class, clientId);
-        /*Query query = manager.createQuery("SELECT u FROM Client u WHERE u.id = :clientId");
-        List<Client> clientList = query.getResultList();
-        Client client1 = clientList.get(0);*/
+
 
 
         long workerId = worker.getId();
         Worker worker2=manager.find(Worker.class,workerId);
-        /*Query query2 = manager.createQuery("SELECT w FROM Worker w WHERE w.id = :workerId");
-        List<Worker> workerList = query2.getResultList();
-        Worker worker1 = workerList.get(0);
-*/
+
         List<ServiceForClient> serviceForClients = new LinkedList<>();
         serviceForClients.add(serviceForClient);
-        worker.setServiceForClients(serviceForClients);
+        worker2.setServiceForClients(serviceForClients);
 
         List<Client> clientsList = new LinkedList<>();
         clientsList.add(client2);
-        worker.setClientList(clientsList);
+        worker2.setClientList(clientsList);
 
         List<Worker> workersList = new LinkedList<>();
         workersList.add(worker2);
-        client.setWorkerList(workersList);
+        client2.setWorkerList(workersList);
 
         List<ServiceForClient> forClientList = new LinkedList<>();
         forClientList.add(serviceForClient);
-        client.setServices(forClientList);
+        client2.setServices(forClientList);
 
         serviceForClient.setWorker(worker2);
         serviceForClient.setClient(client2);
@@ -167,4 +162,6 @@ public class ServiceForClientDaoJPAImpl implements ServiceForClientDao {
     public Long findServicecAmountByWorkerForTime(String workerSecondName, Date dateFrom, Date dateTo) {
         return null;
     }
+
+
 }

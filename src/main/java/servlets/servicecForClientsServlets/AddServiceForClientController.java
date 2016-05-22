@@ -112,7 +112,7 @@ public class AddServiceForClientController extends HttpServlet {
             req.setAttribute("serviceForClient", serviceForClient);
 
 
-        } else if (types.equalsIgnoreCase("REPAIR_BODY_CAR") || types.equalsIgnoreCase("REPAIR_MOTOR") || types.equalsIgnoreCase("EPAIR_CHASSIS")
+        } else if (types.equalsIgnoreCase("REPAIR_BODY_CAR") || types.equalsIgnoreCase("REPAIR_MOTOR") || types.equalsIgnoreCase("REPAIR_CHASSIS")
                 || types.equalsIgnoreCase("REPAIR_BRAKE") || types.equalsIgnoreCase("REPAIR_CLUTCH") || types.equalsIgnoreCase("REPAIR_GEARBOX") ||
                 types.equalsIgnoreCase("CHANGE_TIRES") || types.equalsIgnoreCase("CHANGE_CONSUMABLES") || types.equalsIgnoreCase("DIAGNOSTIC") ||
                 types.equalsIgnoreCase("WASH_CAR_OUTSIDE") || types.equalsIgnoreCase("WASH_CAR_INSIDE") || types.equalsIgnoreCase("WASH_TOTAL") ||
