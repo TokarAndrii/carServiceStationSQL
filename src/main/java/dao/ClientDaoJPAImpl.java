@@ -61,8 +61,7 @@ public class ClientDaoJPAImpl implements ClientDao {
             found.setDriverLicenseNumber(driverLicenseNumber);
             found.setEmail(email);
             found.setPhoneNumber(phoneNumber);
-            /*found.setFirstName(client.getFirstName());
-            found.setSecondtName(client.getSecondName());*/
+
             found.setPass(pass);
 
         } catch (NoClientFoundException e) {

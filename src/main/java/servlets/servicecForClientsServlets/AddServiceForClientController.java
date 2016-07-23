@@ -34,7 +34,7 @@ public class AddServiceForClientController extends HttpServlet {
     private ClientServ clientServ;
     private Worker worker;
     private WorkerServ workerServ;
-    //private List<Worker> workersList;
+
 
 
     @Override
@@ -59,7 +59,7 @@ public class AddServiceForClientController extends HttpServlet {
         PrintWriter printWriter = resp.getWriter();
         Date startDate = null;
         Date finishDate = null;
-        //workersList = new LinkedList<Worker>();
+
 
 
         String priceString = req.getParameter("price");

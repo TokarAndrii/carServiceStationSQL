@@ -23,7 +23,7 @@ public class ClientServImpl implements ClientServ {
     @Autowired
     private ClientDaoJPAImpl clientDaoJPA;
 
-   /* private WorkerDao workerDao;*/
+
 
     private Client client;
 
@@ -33,8 +33,8 @@ public class ClientServImpl implements ClientServ {
     public ClientServImpl() {
     }
 
-    public ClientServImpl(/*WorkerDao workerDao,*/ Validator<Client> clientValidator) {
-        /*this.workerDao = workerDao;*/
+    public ClientServImpl(Validator<Client> clientValidator) {
+
         this.clientValidator = clientValidator;
     }
 
@@ -66,7 +66,7 @@ public class ClientServImpl implements ClientServ {
 
         if (!pass.equals(client.getPass()) &&
                 !driverLicenseNumber.equals(client.getDriverLicenseNumber())) {
-            //System.out.println("wrong pass,email or driverlicense number!!!");
+
             LOGGER.info("wrong pass,email or driverlicense number!!!");
             return null;
         } else {
@@ -103,7 +103,7 @@ public class ClientServImpl implements ClientServ {
 
 
         clientDaoJPA.delete(client);
-        //System.out.println("client deleted (info from clientServ)!!!");
+
         LOGGER.info("Client "+client+" deleted!!!");
 
 

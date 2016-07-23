@@ -34,7 +34,7 @@ public class ServiceForClientServImpl implements ServiceForClientServ {
 
     private ClientServ clientServ;
 
-    //private ServiceForClient serviceForClient;
+
 
 
     public static final int ACCESS_TOKEN_LENGHT = 12;

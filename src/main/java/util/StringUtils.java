@@ -2,9 +2,7 @@ package util;
 
 import java.util.UUID;
 
-/**
- * Created by serhii on 15.08.15.
- */
+
 public final class StringUtils {
 
 

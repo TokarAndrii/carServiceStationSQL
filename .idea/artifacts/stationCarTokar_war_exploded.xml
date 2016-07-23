@@ -97,6 +97,7 @@
         <element id="file-copy" path="$PROJECT_DIR$/target/Station-1.0/META-INF/MANIFEST.MF" />
       </element>
       <element id="javaee-facet-resources" facet="stationCarTokar/web/Web" />
+      <element id="gwt-compiler-output" facet="stationCarTokar/gwt/GWT" />
     </root>
   </artifact>
 </component>

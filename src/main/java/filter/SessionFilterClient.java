@@ -26,11 +26,7 @@ public class SessionFilterClient implements Filter {
 
         clientServ = applicationContext.getBean(ClientServImpl.class);
         workServ = applicationContext.getBean(WorkServImpl.class);
-       /* Admin admin = applicationContext.getBean(Admin.class);
 
-        admin.getUniqueinstance();
-        workServ.register(admin.getFirstName(),admin.getSecondName(),admin.getSalary(),
-                admin.getWorkerTypes(),admin.getPassword(),admin.getLogin());*/
     }
 
     @Override
@@ -49,7 +45,7 @@ public class SessionFilterClient implements Filter {
 
                     request.setAttribute("accessToken", value);
 
-                   /* resp.sendRedirect("auth-error.html");*/
+
                 }
                 if (workServ.getWorker(value) != null) {
                     Worker worker = workServ.getWorker(value);

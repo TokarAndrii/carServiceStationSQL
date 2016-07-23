@@ -40,6 +40,12 @@
         <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/src/main/resources/META-INF/persistence.xml" />
       </configuration>
     </facet>
+    <facet type="gwt" name="GWT">
+      <configuration>
+        <setting name="gwtSdkUrl" value="file:///usr/gwt/sdk/gwt-2.7.0" />
+        <setting name="webFacet" value="Web" />
+      </configuration>
+    </facet>
   </component>
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8" inherit-compiler-output="false">
     <output url="file://$MODULE_DIR$/target/classes" />
@@ -138,5 +144,6 @@
     <orderEntry type="library" name="Maven: org.apache.maven.surefire:common-java5:2.14.1" level="project" />
     <orderEntry type="library" name="Maven: org.testng:testng:jdk15:5.7" level="project" />
     <orderEntry type="library" name="Maven: org.apache.maven.surefire:surefire-api:2.14.1" level="project" />
+    <orderEntry type="library" name="gwt-user" level="project" />
   </component>
 </module>

@@ -52,7 +52,7 @@ public class WorkerDaoJPAImpl implements WorkerDao {
         EntityManager manager = factory.createEntityManager();
         EntityTransaction transaction = manager.getTransaction();
         Worker found = null;
-        //try {
+
         found = findById(id);
 
         if (found == null) {
@@ -66,10 +66,7 @@ public class WorkerDaoJPAImpl implements WorkerDao {
         found.setWorkerTypes(workerTypes);
         found.setLogin(login);
 
-        /*} catch (NoWorkerFoundException e) {
-            e.printStackTrace();
 
-        }*/
 
         try {
             transaction.begin();

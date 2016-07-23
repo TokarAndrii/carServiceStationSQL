@@ -15,7 +15,6 @@ public class Admin extends Worker {
     private static final Logger LOGGER = Logger.getLogger(Admin.class);
 
 
-    //private volatile static Admin uniqueinstance;
 
     @Column(insertable = false, updatable = false)
     private String password;
@@ -38,47 +37,7 @@ public class Admin extends Worker {
     public Admin() {
     }
 
-  /*  public Admin(String password, WorkerTypes workerTypes, String firstName, String secondName, long salary, String login) {
-        this.password = password;
-        this.workerTypes = workerTypes;
-        this.firstName = firstName;
-        this.secondName = secondName;
-        this.salary = salary;
-        this.login = login;
-        setId(1);
-    }*/
 
-   /* public Admin(String firstName, String secondName,long salary) {
-        LOGGER.trace("inside admin constructor");
-        System.out.println("inside admin constructor");
-
-        workerTypes = WorkerTypes.ADMINISTRATOR;
-        System.out.println(workerTypes.toString()+" worker types inside admin constructor");
-        firstName = "testAdminFirstName";
-        System.out.println(firstName.toString()+" first name inside admin constructor");
-        secondName = "testAdminSecondName";
-        System.out.println(secondName.toString()+" second name inside admin constructor");
-        password = "admin";
-        System.out.println(password.toString()+" pass inside admin constructor");
-        login = "admin";
-        System.out.println(login.toString()+" login inside admin constructor");
-        salary = 10000;
-        System.out.println(salary+" slalry inside admin constructor");
-    }
-*/
-
-    /*public static Admin getInstance() {
-        if (uniqueinstance == null) {
-            synchronized (Admin.class) {
-                if (uniqueinstance == null) {
-                    uniqueinstance = new Admin();
-                    System.out.println("create new Admin");
-                    LOGGER.trace("inside getUniqueInstance method");
-                }
-            }
-        }
-        return uniqueinstance;
-    }*/
 
     @Override
     public String getPassword() {

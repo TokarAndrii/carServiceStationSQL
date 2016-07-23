@@ -1,2 +1,3 @@
-tests/LoginTests.class
 tests/Fixture.class
+tests/indexPageTests/SignUpTests.class
+tests/indexPageTests/LoginTests.class

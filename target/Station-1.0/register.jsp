@@ -11,6 +11,19 @@
 
          form.submit();
      }</script>--%>
+
+    <script type="text/javascript">
+        function wrongRepeatPass() {
+
+            var pass1 = document.getElementsByName("pass")[0].value;
+            var pass2 = document.getElementsByName("passRepeated")[0].value;
+            var result=pass1.localeCompare(pass2);
+            if (result!=0){
+               window.alert("Passwords you entered in Password field " +
+                       "and Re-Enter Password are not equals!!! Please try again.")
+            }
+        }
+    </script>
 </head>
 <body>
 <%--
@@ -30,7 +43,7 @@
 
 <div class="registerForm">
 
-    <form class="form-horizontal" role="form" action="register" method="post">
+    <form class="form-horizontal" role="form" action="register" method="post" onsubmit="wrongRepeatPass()">
 
         <div class="form-group">
             <label class="control-label col-sm-2">First Name:</label>
@@ -75,7 +88,16 @@
             <label class="control-label col-sm-2">Password:</label>
             <div class="col-sm-10">
                 <input type="password" class="form-control" name="pass"
-                       placeholder="Enter password from 8 to 20 any symbols" required>
+                       placeholder="Enter password from 8 to 20 any charachter or number" required
+                       pattern="(?=.\w).{8,20}">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2">Re-Enter Password:</label>
+            <div class="col-sm-10">
+                <input type="password" class="form-control" name="passRepeated"
+                       placeholder="Repeat entered password" required
+                       pattern="(?=.\w).{8,20}">
             </div>
         </div>
 

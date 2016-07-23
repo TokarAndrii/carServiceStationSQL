@@ -36,14 +36,18 @@ public class RegisterController extends HttpServlet {
         String email = req.getParameter("email");
         String driverLicenseNumber = req.getParameter("driverLicenseNumber");
         String pass = req.getParameter("pass");
+        String passRepeated = req.getParameter("passRepeated");
+
+        if(!pass.equals(passRepeated)){
+
+        }
 
         PrintWriter printWriter = resp.getWriter();
         Client client = clientServ.register(firstName, secondName,
                 phoneNumber, email, driverLicenseNumber, pass);
         req.setAttribute("client", client);
         LOGGER.info("successful registration" + client.toString());
-        /*req.getRequestDispatcher("/register.jsp").
-                forward(req, resp);*/
+
         req.getRequestDispatcher("/WEB-INF/pages/clientMenu.jsp").
                 forward(req,resp);
 

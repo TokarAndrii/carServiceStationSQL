@@ -147,30 +147,5 @@ public class WorkServImpl implements WorkerServ {
         return accessTokenMap.get(accessToken);
     }
 
-   /* @Override
-    public Worker registerAdmin(String firstName, String secondName, long salary, WorkerTypes workerTypes, String login, String pass, long id) {
-        Worker found = null;
-        try {
-            found = workerDaoJPA.findById(1);
-        } catch (NoWorkerFoundException e) {
-            e.printStackTrace();
-        }
 
-        if (found == null) {
-            if (firstName != null && secondName != null && salary != 0 && workerTypes == WorkerTypes.ADMINISTRATOR && login != null &&
-                    pass != null & id != 0) {
-
-
-                Admin adm = Admin.getInstance();
-                adm.setId(1);
-                String accessToken = StringUtils.generateRandomToken(ACCESS_TOKEN_LENGHT);
-
-                accessTokenMap.put(accessToken, adm);
-
-                return workerDaoJPA.create(adm);
-
-            }
-        }
-        return null;
-    }*/
 }

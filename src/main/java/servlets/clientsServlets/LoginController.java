@@ -50,7 +50,7 @@ public class LoginController extends HttpServlet{
         req.getSession().setAttribute("driverLicenseNumber",
                 driverLicenseNumber);
 
-        //try{
+
         String accessToken = clientServ.login(email, pass, driverLicenseNumber);
         Client client = clientServ.getClient(accessToken);
         resp.addCookie(new Cookie("accessToken", accessToken));
@@ -58,11 +58,6 @@ public class LoginController extends HttpServlet{
         LOGGER.info("you are in system" + client.toString());
         req.getRequestDispatcher("/WEB-INF/pages/clientMenu.jsp").
                 forward(req,resp);//}
-      /*catch (WrongUserCredentionalException ex){
-        LOGGER.error(ex.getMessage(), ex);
-          req.getRequestDispatcher(ERROR_PAGE).forward(req,resp);
-
-      }*/
 
         printWriter.flush();
     }

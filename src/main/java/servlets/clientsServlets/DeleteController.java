@@ -43,13 +43,6 @@ public class DeleteController extends HttpServlet {
        String driverLicenseNumber = (String) req.getSession().
                getAttribute("driverLicenseNumber");
 
-       /*Client cl = (Client) req.getSession().getAttribute("client");
-       long newIdd =  cl.getId();*/
-        //String newId = req.getParameter("id");
-       // long newIdd = Long.parseLong(newId);
-        //String email = req.getParameter("email");
-        //String driverLicenseNumber = req.getParameter("driverLicenseNumber");
-        //String pass = req.getParameter("pass");
 
 
         String accessToken = clientServ.login(email, pass,

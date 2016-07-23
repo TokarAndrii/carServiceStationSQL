@@ -9,7 +9,7 @@
     <test name="Linux / Firefox">
         <parameter name="browser" value="Firefox"/>
         <classes>
-            <class name="tests.LoginTests"/>
+            <class name="tests.indexPageTests.LoginTests"/>
         </classes>
 
     </test>

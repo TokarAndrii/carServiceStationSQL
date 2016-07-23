@@ -24,11 +24,6 @@ public class ConfigData {
 
 
 
-/*        System.out.println(key);                //Logo
-        System.out.println(partsOfLocators[0]); //cssSelector(
-        System.out.println(findMetod);          //cssSelector
-        System.out.println(target);             //.ellos.active*/
-
     // Return By class with appropriate method and target
 
 

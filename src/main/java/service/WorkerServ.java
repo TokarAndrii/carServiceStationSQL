@@ -34,5 +34,5 @@ public interface WorkerServ {
     
     Worker getWorker(String accessToken);
 
-   // Worker registerAdmin(String firstName, String secondName, long salary, WorkerTypes workerTypes,String login, String pass,long id);
+
 }

@@ -30,6 +30,7 @@ exeption/NoClientFoundException.class
 service/WorkServImpl.class
 filter/SessionFilterClient.class
 servlets/clientsServlets/UpdateController.class
+pages/SignUpClientPage.class
 util/StringUtils.class
 dao/WorkerDaoJPAImpl.class
 model/StoreGoodsTypes.class
