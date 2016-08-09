@@ -7,34 +7,32 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <%-- <script>function placeRegister(form) {
 
-         form.submit();
-     }</script>--%>
-
+<%--
     <script type="text/javascript">
         function wrongRepeatPass() {
 
             var pass1 = document.getElementsByName("pass")[0].value;
             var pass2 = document.getElementsByName("passRepeated")[0].value;
-            var result=pass1.localeCompare(pass2);
-            if (result!=0){
-               window.alert("Passwords you entered in Password field " +
-                       "and Re-Enter Password are not equals!!! Please try again.")
+            var result = pass1.localeCompare(pass2);
+            if (result != 0) {
+
+                window.alert("Passwords you entered in Password field " +
+                        "and Re-Enter Password are not equals!!! Please try again.")
+
             }
         }
-    </script>
+    </script>--%>
+
 </head>
 <body>
-<%--
-<%@include file="WEB-INF/mainLogoImport.jsp"%>
-<link rel="stylesheet" href="stylesheet.css">--%>
+
 
 <div id="tokar_container_header">
     <p class="headerRegister">
         <span id="registerClientForm">Регистрация клиента</span>
-                <span><img src="images/serviceCenterLogo.jpg" class="img-thumbnail" alt="logo"
-                           style="width: 85px; height: 85px;float:right"/></span>
+        <span><img src="images/serviceCenterLogo.jpg" class="img-thumbnail" alt="logo"
+                   style="width: 85px; height: 85px;float:right"/></span>
     </p>
 </div>
 <br>
@@ -110,21 +108,6 @@
 
     </form>
 </div>
-
-
-<%--
-<div class="register form">
-    <form action="register" method="post">
-        FirstName : <input name="firstName" type="text"><br>
-        SecondName : <input name="secondName" type="text"><br>
-        PhoneNumber : <input name="phoneNumber" type="text"><br>
-        Email : <input name="email" type="text"><br>
-        DriverLicenseNumber : <input name="driverLicenseNumber" type="text"><br>
-        Pass : <input name="pass" type="text"><br>
-        <input type="submit">
-
-    </form>
-</div>--%>
 
 </body>
 

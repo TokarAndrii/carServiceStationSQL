@@ -5,6 +5,7 @@ import org.apache.log4j.Logger;
 import org.springframework.context.ApplicationContext;
 import service.ClientServ;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -38,20 +39,26 @@ public class RegisterController extends HttpServlet {
         String pass = req.getParameter("pass");
         String passRepeated = req.getParameter("passRepeated");
 
-        if(!pass.equals(passRepeated)){
+        PrintWriter printWriter = resp.getWriter();
+
+        if (!pass.equals(passRepeated)) {
+            RequestDispatcher rd = req.getRequestDispatcher("/register.jsp");
+
+            printWriter.println("<font color=red>Passwords you entered in Password field and Re-Enter Password field" +
+                    " are not equals!!! Please try again.</font>");
+            rd.include(req, resp);
+
+        } else {
+            Client client = clientServ.register(firstName, secondName,
+                    phoneNumber, email, driverLicenseNumber, pass);
+            req.setAttribute("client", client);
+            LOGGER.info("successful registration" + client.toString());
+
+            req.getRequestDispatcher("/WEB-INF/pages/clientMenu.jsp").
+                    forward(req, resp);
+
+            printWriter.flush();
 
         }
-
-        PrintWriter printWriter = resp.getWriter();
-        Client client = clientServ.register(firstName, secondName,
-                phoneNumber, email, driverLicenseNumber, pass);
-        req.setAttribute("client", client);
-        LOGGER.info("successful registration" + client.toString());
-
-        req.getRequestDispatcher("/WEB-INF/pages/clientMenu.jsp").
-                forward(req,resp);
-
-        printWriter.flush();
-
     }
 }

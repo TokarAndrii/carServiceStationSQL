@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Car Service Station "TOKAR"</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <style type="text/css">
+        #container {
+            height: 450px;
+            width: 650px;
+            margin: 20px auto;
+            position: relative;
+        }
+
+        #img {
+            height: 450px;
+            width: 650px;
+            position: absolute;
+        }
+
+        #leftHolder {
+            height: 450px;
+            width: 100px;
+            top: 0px;
+            position: absolute;
+            left: 0px;
+        }
+
+        #rightHolder {
+            height: 450px;
+            width: 100px;
+            top: 0px;
+            position: absolute;
+            right: 0px;
+        }
+
+        .left {
+            height: 50px;
+            width: 50px;
+            position: absolute;
+            top: 40%;
+            left: 0px;
+
+        }
+
+        .right {
+            height: 50px;
+            width: 50px;
+            position: absolute;
+            top: 40%;
+            right: 0px;
+        }
+
+        #tokar_container_header {
+            height: 100px;
+            width: auto;
+        }
+
+        .YourName {
+            text-align: left;
+            /*font-size: 80%;
+            font-family: fantasy;
+            font-style: italic;*/
+        }
+
+        #yourNameCompany {
+            font-size: 80%;
+            font-family: cursive;
+        }
+
+
+    </style>
+    <script type="text/javascript">
+        var imgcount = 1;
+        var total = 6;
+
+        function slide(x) {
+            var Image = document.getElementById('img');
+            imgcount = imgcount + x;
+            if (imgcount > total) {
+                imgcount = 1;
+            }
+            if (imgcount < 1) {
+                imgcount = total;
+            }
+            Image.src = "images/img" + imgcount + ".jpg";
+        }
+        window.setInterval(function slideAuto() {
+            var Image = document.getElementById('img');
+            imgcount = imgcount + 1;
+
+            if (imgcount > total) {
+                imgcount = 1;
+            }
+            if (imgcount < 1) {
+                imgcount = total;
+            }
+            Image.src = "images/img" + imgcount + ".jpg";
+        }, 3000);
+    </script>
+</head>
+
+<body onload="slideAuto()" class="template_a_1">
+
+<div id="tokar_gradient">
+    <div id="tokar_container_page">
+        <div id="tokar_container_header">
+            <p class="YourName">
+                <span id="yourNameCompany">Car Service Station "TOKAR"</span>
+                <span><img src="images/serviceCenterLogo.jpg"  class="img-thumbnail" alt="logo"
+                           style="width: 85px; height: 85px;float:right"/></span>
+            </p>
+        </div>
+
+        <nav class="navbar navbar-default">
+            <ul class="nav navbar-nav">
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    Ремонт и обслуживание автомобиля<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Диагностика</a></li>
+                    <li><a href="#">Ремонт двигателя</a></li>
+                    <li><a href="#">Ремонт кузова автомобиля</a></li>
+                    <li><a href="#">Ремонт коробки передач</a></li>
+                    <li><a href="#">Ремонт сцепления</a></li>
+                    <li><a href="#">Ремонт шасси</a></li>
+                    <li><a href="#">Ремонт тормозов</a></li>
+                    <li><a href="#">Ремонт шин</a></li>
+                    <li><a href="#">Замена расходных материалов</a></li>
+                    <li><a href="#">Другой вид ремонта</a></li>
+                </ul></li>
+
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    Автомобильные товары и запчасти<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Запчасти</a></li>
+                    <li><a href="#">Расходные материалы</a></li>
+                    <li><a href="#">Шины и диски</a></li>
+                    <li><a href="#">Сувениры</a></li>
+                </ul></li>
+
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    Автомойка<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Мока автомобиля снаружи</a></li>
+                    <li><a href="#">Мойка и чистка автомобиля внутри</a></li>
+                </ul></li>
+
+                <li id="tokar_navigation_aboutCompany"><a href="#">О компании</a></li>
+                <li class="active"><a href="index.html">Главная</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="register.jsp"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                <li><a href="login.jsp"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div id="tokar_container_content">
+        <div id="container">
+            <img src="images/img1.jpg" id="img">
+
+            <div id="leftHolder"><img onclick="slide(-1)" class="left" src="images/leftArrow.png"></div>
+            <div id="rightHolder"><img onclick="slide(+1)" class="right" src="images/rightArrow.png"></div>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="pull-left">
+        <ul class="list-inline">
+            <li><a href="#">Новости</a></li>
+            <li><a href="#">Действующие акции</a></li>
+            <li><a href="#">Проверить наличие запчастей</a></li>
+            <li><a href="#">Записаться</a></li>
+            <li><a href="#">Ваш менеджер</a></li>
+            <li><a href="#">Схема проеда и контакты</a></li>
+            <li><a href="#">Карта Сайта</a></li>
+            <li><a href="workerCabinet.jsp">Кабинет для сотрудников</a></li>
+
+        </ul>
+    </div>
+    <!--<div><a href="#">Кабинет для сотрудников</a> </div>-->
+</footer>
+</div>
+</div>
+</body>
+</html>
