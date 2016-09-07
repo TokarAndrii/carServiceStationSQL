@@ -27,5 +27,8 @@ public interface ServiceForClientServ {
 
     boolean addRelatives(Worker worker, Client client, ServiceForClient serviceForClient);
 
+    ServiceForClient updateServiceForClient (ServiceTypes serviceTypes, StoreGoodsTypes storeGoodsTypes,
+                                             Date startDate,Date finishDate, long priceOfService, Worker worker);
+
 
 }

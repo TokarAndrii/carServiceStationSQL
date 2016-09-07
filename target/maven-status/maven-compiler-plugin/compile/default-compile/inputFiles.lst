@@ -13,6 +13,7 @@ C:\Users\HyperX\.IntelliJIdea2016.2\carServiceStation\src\main\java\util\StringU
 C:\Users\HyperX\.IntelliJIdea2016.2\carServiceStation\src\main\java\pages\SignUpClientPage.java
 C:\Users\HyperX\.IntelliJIdea2016.2\carServiceStation\src\main\java\exeption\NoClientFoundException.java
 C:\Users\HyperX\.IntelliJIdea2016.2\carServiceStation\src\main\java\model\Worker.java
+C:\Users\HyperX\.IntelliJIdea2016.2\carServiceStation\src\main\java\servlets\servicecForClientsServlets\FindSFCbyID.java
 C:\Users\HyperX\.IntelliJIdea2016.2\carServiceStation\src\main\java\dao\ServiceForClientDaoJPAImpl.java
 C:\Users\HyperX\.IntelliJIdea2016.2\carServiceStation\src\main\java\model\ServiceForClient.java
 C:\Users\HyperX\.IntelliJIdea2016.2\carServiceStation\src\main\java\servlets\workerServlets\RegisterController.java
@@ -26,6 +27,7 @@ C:\Users\HyperX\.IntelliJIdea2016.2\carServiceStation\src\main\java\servlets\cli
 C:\Users\HyperX\.IntelliJIdea2016.2\carServiceStation\src\main\java\servlets\servicecForClientsServlets\AddServiceForClientController.java
 C:\Users\HyperX\.IntelliJIdea2016.2\carServiceStation\src\main\java\service\ServiceForClientServ.java
 C:\Users\HyperX\.IntelliJIdea2016.2\carServiceStation\src\main\java\model\ServiceTypes.java
+C:\Users\HyperX\.IntelliJIdea2016.2\carServiceStation\src\main\java\servlets\servicecForClientsServlets\UpdateServiceForClient.java
 C:\Users\HyperX\.IntelliJIdea2016.2\carServiceStation\src\main\java\exeption\NoWorkerFoundException.java
 C:\Users\HyperX\.IntelliJIdea2016.2\carServiceStation\src\main\java\service\ClientServImpl.java
 C:\Users\HyperX\.IntelliJIdea2016.2\carServiceStation\src\main\java\dao\ServiceForClientDao.java

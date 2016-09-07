@@ -57,7 +57,7 @@
 <br>
 
 <div id="serviceForClientServAddForm">
-    <form lass="form-horizontal" role="form" action="addSFC" method="post">
+    <form class="form-horizontal" role="form" action="addSFC" method="post">
 
 
         <div class="form-group">

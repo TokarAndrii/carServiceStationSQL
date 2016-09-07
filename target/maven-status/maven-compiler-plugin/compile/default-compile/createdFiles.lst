@@ -16,6 +16,7 @@ model\StoreGoodsTypes.class
 pages\CarServStation.class
 dao\ServiceForClientDao.class
 pages\SignUpClientPage.class
+servlets\servicecForClientsServlets\FindSFCbyID.class
 dao\ServiceForClientDaoJPAImpl.class
 util\GridInitialization.class
 pages\ClientLoginPage.class
@@ -44,6 +45,7 @@ util\ConnectionFactory.class
 dao\WorkerDaoJPAImpl.class
 model\ServiceForClient.class
 dao\WorkerDao.class
+servlets\servicecForClientsServlets\UpdateServiceForClient.class
 service\ServiceForClientServ.class
 util\ClassNameUtil.class
 exeption\MyValidationException.class

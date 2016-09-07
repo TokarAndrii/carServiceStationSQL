@@ -2,6 +2,7 @@ package service;
 
 import dao.ServiceForClientDaoJPAImpl;
 import dao.WorkerDao;
+import exeption.NoServiceTypeFoundException;
 import exeption.NoWorkerFoundException;
 import model.*;
 import org.apache.log4j.Logger;
@@ -35,8 +36,6 @@ public class ServiceForClientServImpl implements ServiceForClientServ {
     private ClientServ clientServ;
 
 
-
-
     public static final int ACCESS_TOKEN_LENGHT = 12;
 
     public ServiceForClientServImpl() {
@@ -57,7 +56,7 @@ public class ServiceForClientServImpl implements ServiceForClientServ {
 
             ServiceForClient serviceForClient = new ServiceForClient(storeGoodsTypes,
 
-            startDate, finishDate, priceOfService, client, worker);
+                    startDate, finishDate, priceOfService, client, worker);
 
             return serviceForClientDaoJPA.start(serviceForClient, worker, client);
 
@@ -66,7 +65,6 @@ public class ServiceForClientServImpl implements ServiceForClientServ {
 
             ServiceForClient serviceForClient = new ServiceForClient(serviceTypes,
                     startDate, finishDate, priceOfService, client, worker);
-
 
 
             return serviceForClientDaoJPA.start(serviceForClient, worker, client);
@@ -100,7 +98,18 @@ public class ServiceForClientServImpl implements ServiceForClientServ {
 
     @Override
     public ServiceForClient findById(long idServiceForClient) {
-        return null;
+
+        ServiceForClient found = null;
+
+        try {
+            found = serviceForClientDaoJPA.findByID(idServiceForClient);
+        } catch (NoServiceTypeFoundException e) {
+            e.printStackTrace();
+        }
+
+
+        LOGGER.info("Service for client with id =" + idServiceForClient + " found!!! " + found.toString());
+        return found;
     }
 
     @Override
@@ -132,5 +141,11 @@ public class ServiceForClientServImpl implements ServiceForClientServ {
 
 
         return false;
+    }
+
+    @Override
+    public ServiceForClient updateServiceForClient(ServiceTypes serviceTypes, StoreGoodsTypes storeGoodsTypes,
+                                                   Date startDate, Date finishDate, long priceOfService, Worker worker) {
+        return null;
     }
 }

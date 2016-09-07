@@ -78,8 +78,8 @@
             <div class="input-append date form_datetime" data-date="2016-01-01T15:25:00Z">
 
                 <input class="datetimepicker" type="text" name="startDate" value="" required>
-                <span class="add-on"><i class="icon-remove"></i></span>
-                <span class="add-on"><i class="icon-th"></i></span>
+                <%--<span class="add-on"><i class="icon-remove"></i></span>
+                <span class="add-on"><i class="icon-th"></i></span>--%>
 
             </div>
         </div>
@@ -91,8 +91,8 @@
             <div class="input-append date form_datetime" data-date="2016-01-01T15:25:00Z">
 
                 <input class="datetimepicker" type="text" name="finishDate" value="" required>
-                <span class="add-on"><i class="icon-remove"></i></span>
-                <span class="add-on"><i class="icon-th"></i></span>
+                <%--<span class="add-on"><i class="icon-remove"></i></span>
+                <span class="add-on"><i class="icon-th"></i></span>--%>
 
             </div>
         </div>

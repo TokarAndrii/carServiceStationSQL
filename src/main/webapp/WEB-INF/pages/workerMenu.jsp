@@ -1,10 +1,4 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: tokarandrii
-  Date: 29.04.16
-  Time: 22:38
-  To change this template use File | Settings | File Templates.
---%>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <%@include file="import.jsp" %>
@@ -26,7 +20,7 @@
     <ul>
 
         <li> <a href="addSFC.jsp">Add service</a></li>
-        <li><a href="#">Update service</a></li>
+        <li><a href="updateSFC.jsp">Update service</a></li>
         <li><a href="#">Remove service from Time-table</a></li>
         <li><a href="#">Confirm of service have done</a></li>
         <br>

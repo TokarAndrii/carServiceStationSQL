@@ -2,265 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bc0f3286-8c92-447a-88c8-bff28f0b1fe7" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0.war" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/META-INF/MANIFEST.MF" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/classes/META-INF/persistence.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/classes/UIMapping.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/classes/app-context.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/classes/application.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/classes/dao/ClientDao.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/classes/dao/ClientDaoJPAImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/classes/dao/ServiceForClientDao.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/classes/dao/ServiceForClientDaoJPAImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/classes/dao/WorkerDao.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/classes/dao/WorkerDaoJPAImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/classes/db.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/classes/exeption/MyValidationException.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/classes/exeption/NoClientFoundException.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/classes/exeption/NoElementFound.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/classes/exeption/NoServiceTypeFoundException.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/classes/exeption/NoWorkerFoundException.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/classes/exeption/WrongUserCredentionalException.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/classes/filter/SessionFilterClient.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/classes/init-db.sql" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/classes/listener/SpringContextInitListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/classes/log4j.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/classes/model/Admin.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/classes/model/Client.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/classes/model/IdEntity.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/classes/model/ServiceForClient.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/classes/model/ServiceTypes.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/classes/model/StoreGoodsTypes.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/classes/model/Worker.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/classes/model/WorkerTypes.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/classes/pages/CarServStation.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/classes/pages/ClientLoginPage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/classes/pages/MainPage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/classes/pages/Page.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/classes/pages/SignUpClientPage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/classes/service/ClientServ.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/classes/service/ClientServImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/classes/service/ServiceForClientServ.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/classes/service/ServiceForClientServImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/classes/service/WorkServImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/classes/service/WorkerServ.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/classes/servlets/clientsServlets/DeleteController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/classes/servlets/clientsServlets/LoginController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/classes/servlets/clientsServlets/RegisterController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/classes/servlets/clientsServlets/UpdateController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/classes/servlets/servicecForClientsServlets/AddServiceForClientController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/classes/servlets/workerServlets/LoginController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/classes/servlets/workerServlets/RegisterController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/classes/util/ClassNameUtil.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/classes/util/ConfigData.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/classes/util/ConnectionFactory.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/classes/util/GetEnumFromString.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/classes/util/GridInitialization.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/classes/util/PropertyLoader.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/classes/util/StringUtils.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/classes/util/WebDriverFactory.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/classes/util/WebDriverWrapper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/classes/util/WebElementsActions.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/classes/validator/Validator.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/index3.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/lib/antlr-2.7.7.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/lib/aopalliance-1.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/lib/aspectjrt-1.7.4.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/lib/aspectjtools-1.7.4.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/lib/assertj-core-1.6.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/lib/bsh-2.0b4.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/lib/cglib-nodep-2.1_3.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/lib/common-java5-2.14.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/lib/commons-codec-1.10.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/lib/commons-collections-3.2.2.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/lib/commons-exec-1.3.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/lib/commons-io-2.4.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/lib/commons-jxpath-1.3.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/lib/commons-lang3-3.4.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/lib/commons-logging-1.2.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/lib/cssparser-0.9.16.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/lib/dom4j-1.6.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/lib/gson-2.3.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/lib/guava-19.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/lib/hamcrest-core-1.3.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/lib/hibernate-commons-annotations-4.0.1.Final.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/lib/hibernate-core-4.2.1.Final.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/lib/hibernate-entitymanager-4.2.1.Final.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/lib/hibernate-jpa-2.0-api-1.0.1.Final.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/lib/htmlunit-2.18.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/lib/htmlunit-core-js-2.17.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/lib/httpclient-4.5.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/lib/httpcore-4.4.3.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/lib/httpmime-4.5.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/lib/ini4j-0.5.2.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/lib/javassist-3.15.0-GA.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/lib/javax.servlet-api-3.1.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/lib/jboss-logging-3.1.0.GA.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/lib/jboss-transaction-api_1.1_spec-1.0.1.Final.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/lib/jcommander-1.27.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/lib/jetty-io-9.2.12.v20150709.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/lib/jetty-util-9.2.12.v20150709.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/lib/jna-4.1.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/lib/jna-platform-4.1.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/lib/jstl-1.2.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/lib/junit-4.11.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/lib/log4j-1.2.17.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/lib/maven-artifact-2.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/lib/mysql-connector-java-5.1.36.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/lib/nekohtml-1.9.22.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/lib/netty-3.5.2.Final.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/lib/operadriver-1.5.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/lib/operalaunchers-1.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/lib/phantomjsdriver-1.1.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/lib/plexus-utils-1.0.4.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/lib/protobuf-java-2.4.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/lib/sac-1.3.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/lib/selenium-api-2.51.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/lib/selenium-chrome-driver-2.51.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/lib/selenium-edge-driver-2.51.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/lib/selenium-firefox-driver-2.51.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/lib/selenium-htmlunit-driver-2.51.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/lib/selenium-ie-driver-2.51.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/lib/selenium-java-2.51.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/lib/selenium-leg-rc-2.51.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/lib/selenium-remote-driver-2.51.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/lib/selenium-safari-driver-2.51.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/lib/selenium-support-2.51.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/lib/serializer-2.7.2.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/lib/spring-aop-4.2.0.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/lib/spring-beans-4.2.0.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/lib/spring-context-4.2.0.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/lib/spring-core-4.2.0.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/lib/spring-expression-4.2.0.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/lib/spring-jdbc-4.2.0.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/lib/spring-orm-4.2.0.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/lib/spring-tx-4.2.0.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/lib/surefire-api-2.14.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/lib/surefire-testng-2.14.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/lib/testng-5.7-jdk15.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/lib/testng-6.8.8.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/lib/webbit-0.4.14.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/lib/webdriver-factory-1.1.41.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/lib/websocket-api-9.2.12.v20150709.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/lib/websocket-client-9.2.12.v20150709.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/lib/websocket-common-9.2.12.v20150709.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/lib/xalan-2.7.2.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/lib/xercesImpl-2.11.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/lib/xml-apis-1.4.01.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/mainLogoImport.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/pages/administratorMenu.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/pages/clientMenu.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/pages/createService.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/pages/deleter.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/pages/import.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/pages/showServices.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/pages/updater.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/pages/workerMenu.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/WEB-INF/web.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/addSFC.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/addServiceForClient.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/dateTimePeacker/css/bootstrap-datetimepicker.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/dateTimePeacker/css/bootstrap.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/dateTimePeacker/css/jquery-ui.theme.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/dateTimePeacker/images/ui-icons_444444_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/dateTimePeacker/images/ui-icons_555555_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/dateTimePeacker/images/ui-icons_777620_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/dateTimePeacker/images/ui-icons_777777_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/dateTimePeacker/images/ui-icons_cc0000_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/dateTimePeacker/images/ui-icons_ffffff_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/dateTimePeacker/js/bootstrap-datetimepicker.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/dateTimePeacker/js/bootstrap-datetimepicker.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/dateTimePeacker/js/locales/bootstrap-datetimepicker.ar.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/dateTimePeacker/js/locales/bootstrap-datetimepicker.az.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/dateTimePeacker/js/locales/bootstrap-datetimepicker.bg.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/dateTimePeacker/js/locales/bootstrap-datetimepicker.bn.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/dateTimePeacker/js/locales/bootstrap-datetimepicker.ca.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/dateTimePeacker/js/locales/bootstrap-datetimepicker.cs.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/dateTimePeacker/js/locales/bootstrap-datetimepicker.da.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/dateTimePeacker/js/locales/bootstrap-datetimepicker.de.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/dateTimePeacker/js/locales/bootstrap-datetimepicker.ee.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/dateTimePeacker/js/locales/bootstrap-datetimepicker.el.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/dateTimePeacker/js/locales/bootstrap-datetimepicker.es.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/dateTimePeacker/js/locales/bootstrap-datetimepicker.fi.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/dateTimePeacker/js/locales/bootstrap-datetimepicker.fr.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/dateTimePeacker/js/locales/bootstrap-datetimepicker.he.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/dateTimePeacker/js/locales/bootstrap-datetimepicker.hr.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/dateTimePeacker/js/locales/bootstrap-datetimepicker.hu.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/dateTimePeacker/js/locales/bootstrap-datetimepicker.hy.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/dateTimePeacker/js/locales/bootstrap-datetimepicker.id.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/dateTimePeacker/js/locales/bootstrap-datetimepicker.is.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/dateTimePeacker/js/locales/bootstrap-datetimepicker.it.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/dateTimePeacker/js/locales/bootstrap-datetimepicker.ja.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/dateTimePeacker/js/locales/bootstrap-datetimepicker.ka.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/dateTimePeacker/js/locales/bootstrap-datetimepicker.ko.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/dateTimePeacker/js/locales/bootstrap-datetimepicker.lt.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/dateTimePeacker/js/locales/bootstrap-datetimepicker.lv.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/dateTimePeacker/js/locales/bootstrap-datetimepicker.ms.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/dateTimePeacker/js/locales/bootstrap-datetimepicker.nb.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/dateTimePeacker/js/locales/bootstrap-datetimepicker.nl.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/dateTimePeacker/js/locales/bootstrap-datetimepicker.no.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/dateTimePeacker/js/locales/bootstrap-datetimepicker.pl.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/dateTimePeacker/js/locales/bootstrap-datetimepicker.pt-BR.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/dateTimePeacker/js/locales/bootstrap-datetimepicker.pt.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/dateTimePeacker/js/locales/bootstrap-datetimepicker.ro.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/dateTimePeacker/js/locales/bootstrap-datetimepicker.rs-latin.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/dateTimePeacker/js/locales/bootstrap-datetimepicker.rs.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/dateTimePeacker/js/locales/bootstrap-datetimepicker.ru.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/dateTimePeacker/js/locales/bootstrap-datetimepicker.sk.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/dateTimePeacker/js/locales/bootstrap-datetimepicker.sl.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/dateTimePeacker/js/locales/bootstrap-datetimepicker.sv.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/dateTimePeacker/js/locales/bootstrap-datetimepicker.sw.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/dateTimePeacker/js/locales/bootstrap-datetimepicker.th.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/dateTimePeacker/js/locales/bootstrap-datetimepicker.tr.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/dateTimePeacker/js/locales/bootstrap-datetimepicker.ua.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/dateTimePeacker/js/locales/bootstrap-datetimepicker.uk.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/dateTimePeacker/js/locales/bootstrap-datetimepicker.zh-CN.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/dateTimePeacker/js/locales/bootstrap-datetimepicker.zh-TW.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/dateTimePeacker/js/main.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/images/Girls_Girl_repairing_car_094813_.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/images/autoGoods.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/images/avtoWash.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/images/img1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/images/img2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/images/img3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/images/img4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/images/img5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/images/img6.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/images/leftArrow.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/images/rightArrow.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/images/serviceCenterLogo.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/images/serviceCenterLogo2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/login.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/loginForWorker.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/newAddService.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/register.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/registerForWorker.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/registerWorker.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/stylesheet.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Station-1.0/workerCabinet.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/tests/LoginTests.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/servlets/clientsServlets/RegisterController.class" afterPath="$PROJECT_DIR$/target/classes/servlets/clientsServlets/RegisterController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/util/WebElementsActions.class" afterPath="$PROJECT_DIR$/target/classes/util/WebElementsActions.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/stationCarTokar_war.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/stationCarTokar_war.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/stationCarTokar_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/stationCarTokar_war_exploded.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/servlets/servicecForClientsServlets/FindSFCbyID.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/updateSFC.jsp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/temp/log.txt" afterPath="$PROJECT_DIR$/src/main/java/temp/log.out" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/carServiceStation-1.0.war" afterPath="$PROJECT_DIR$/target/carServiceStation-1.0.war" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/carServiceStation-1.0/WEB-INF/classes/service/ServiceForClientServ.class" afterPath="$PROJECT_DIR$/target/carServiceStation-1.0/WEB-INF/classes/service/ServiceForClientServ.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/carServiceStation-1.0/WEB-INF/classes/service/ServiceForClientServImpl.class" afterPath="$PROJECT_DIR$/target/carServiceStation-1.0/WEB-INF/classes/service/ServiceForClientServImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/service/ServiceForClientServ.class" afterPath="$PROJECT_DIR$/target/classes/service/ServiceForClientServ.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/service/ServiceForClientServImpl.class" afterPath="$PROJECT_DIR$/target/classes/service/ServiceForClientServImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/servlets/clientsServlets/RegisterController.java" afterPath="$PROJECT_DIR$/src/main/java/servlets/clientsServlets/RegisterController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/app-context.xml" afterPath="$PROJECT_DIR$/src/main/resources/app-context.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/service/ServiceForClientServ.java" afterPath="$PROJECT_DIR$/src/main/java/service/ServiceForClientServ.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/service/ServiceForClientServImpl.java" afterPath="$PROJECT_DIR$/src/main/java/service/ServiceForClientServImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/register.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/register.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stationCarTokar.iml" afterPath="$PROJECT_DIR$/stationCarTokar.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/app-context.xml" afterPath="$PROJECT_DIR$/target/classes/app-context.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/workerMenu.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/workerMenu.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/addSFC.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/addSFC.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/newAddService.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/newAddService.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/registerWorker.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/registerWorker.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/carServiceStation-1.0/WEB-INF/classes/log4j.properties" afterPath="$PROJECT_DIR$/target/carServiceStation-1.0/WEB-INF/classes/log4j.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/carServiceStation-1.0/WEB-INF/pages/workerMenu.jsp" afterPath="$PROJECT_DIR$/target/carServiceStation-1.0/WEB-INF/pages/workerMenu.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/carServiceStation-1.0/addSFC.jsp" afterPath="$PROJECT_DIR$/target/carServiceStation-1.0/addSFC.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/carServiceStation-1.0/newAddService.jsp" afterPath="$PROJECT_DIR$/target/carServiceStation-1.0/newAddService.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/carServiceStation-1.0/registerWorker.jsp" afterPath="$PROJECT_DIR$/target/carServiceStation-1.0/registerWorker.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/log4j.properties" afterPath="$PROJECT_DIR$/target/classes/log4j.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" />
     </list>
     <ignored path="stationCarTokar.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -1040,22 +806,74 @@
     </favorites_list>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="register.jsp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/register.jsp">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="updateSFC.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/updateSFC.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+            <state relative-caret-position="459">
+              <caret line="87" column="0" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RegisterController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/servlets/clientsServlets/RegisterController.java">
+      <file leaf-file-name="AddServiceForClientController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/servlets/servicecForClientsServlets/AddServiceForClientController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="46" column="39" selection-start-line="46" selection-start-column="39" selection-end-line="46" selection-end-column="39" />
+            <state relative-caret-position="612">
+              <caret line="58" column="51" selection-start-line="58" selection-start-column="8" selection-end-line="58" selection-end-column="51" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="addSFC.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/addSFC.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="64" column="35" selection-start-line="64" selection-start-column="35" selection-end-line="64" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ServiceForClientServImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/service/ServiceForClientServImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2019">
+              <caret line="151" column="0" selection-start-line="151" selection-start-column="0" selection-end-line="151" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ServiceForClientServ.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/service/ServiceForClientServ.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="30" column="113" selection-start-line="30" selection-start-column="113" selection-end-line="30" selection-end-column="113" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UpdateServiceForClient.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/servlets/servicecForClientsServlets/UpdateServiceForClient.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="545">
+              <caret line="113" column="0" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="log.out" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/temp/log.out">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-102">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -1071,8 +889,8 @@
         <option value="Enum" />
         <option value="Interface" />
         <option value="XSLT Stylesheet" />
-        <option value="Jsp File" />
         <option value="HTML File" />
+        <option value="Jsp File" />
         <option value="Class" />
       </list>
     </option>
@@ -1091,22 +909,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/webapp/bootstrap/js/main.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/dateTimePeacker/js/main.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/dateTimePeacker/css/bootstrap-datetimepicker.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/NewAddService.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/newAddService.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/dateTimePeacker/jquery-ui.theme.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/sample in bootstrap v3/test33.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/testDatePeacker.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/testDatePeacker2.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/AddSFC.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/workerMenu.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/administratorMenu.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/temp/log.txt" />
         <option value="$PROJECT_DIR$/src/main/java/model/ServiceTypes.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/addSFC.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/service/ServiceForClientServ.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/Worker.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/ServiceForClient.java" />
         <option value="$PROJECT_DIR$/src/main/java/dao/ServiceForClientDao.java" />
@@ -1120,7 +927,6 @@
         <option value="$PROJECT_DIR$/src/main/java/listener/SpringContextInitListener.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/Admin.java" />
         <option value="$PROJECT_DIR$/src/main/java/service/ClientServImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/service/ServiceForClientServImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/service/WorkerServ.java" />
         <option value="$PROJECT_DIR$/src/main/java/service/WorkServImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/servlets/clientsServlets/DeleteController.java" />
@@ -1139,9 +945,21 @@
         <option value="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/log4j.properties" />
         <option value="$PROJECT_DIR$/src/main/java/servlets/clientsServlets/RegisterController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/register.jsp" />
+        <option value="$PROJECT_DIR$/src/main/resources/log4j.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/servlets/servicecForClientsServlets/ChangeServiceForClient.java" />
+        <option value="$PROJECT_DIR$/lib/javax.servlet.jar!/javax/servlet/ServletResponse.class" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/updateSFC.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/workerMenu.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/newAddService.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/registerWorker.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/service/ServiceForClientServ.java" />
+        <option value="$PROJECT_DIR$/src/main/java/service/ServiceForClientServImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/temp/log.out" />
+        <option value="$PROJECT_DIR$/src/main/webapp/addSFC.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/updateSFC.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/servlets/servicecForClientsServlets/UpdateServiceForClient.java" />
       </list>
     </option>
   </component>
@@ -1173,9 +991,9 @@
     </option>
     <option name="enabledProfiles">
       <list>
-        <option value="firefox" />
-        <option value="ie" />
         <option value="chrome" />
+        <option value="ie" />
+        <option value="firefox" />
       </list>
     </option>
   </component>
@@ -1209,10 +1027,6 @@
         <PATH_ELEMENT>
           <option name="myItemId" value="" />
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Profiles" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProfilesNode" />
         </PATH_ELEMENT>
       </PATH>
     </treeState>
@@ -1319,6 +1133,118 @@
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stationCarTokar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="carServiceStation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stationCarTokar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="carServiceStation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dateTimePeacker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stationCarTokar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="carServiceStation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dateTimePeacker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stationCarTokar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="carServiceStation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -1339,6 +1265,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stationCarTokar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="carServiceStation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="temp" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1365,6 +1317,40 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="servlets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="workerServlets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stationCarTokar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="carServiceStation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="servlets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="servicecForClientsServlets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1398,10 +1384,62 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stationCarTokar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="carServiceStation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stationCarTokar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="carServiceStation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -1416,17 +1454,16 @@
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.46551725" />
-    <property name="settings.editor.selected.configurable" value="preferences.applicationServers" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.appearance" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="js-jscs-nodeInterpreter" value="/usr/bin/node" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/gwt/carService" />
-      <recent name="$PROJECT_DIR$/src/main/webapp" />
-      <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF" />
-      <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages" />
-      <recent name="$PROJECT_DIR$/src/main/webapp/dateTimePeacker2" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="util" />
+      <recent name="exeption" />
+      <recent name="validator" />
+      <recent name="dao" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="servlets" />
@@ -1443,11 +1480,12 @@
       <recent name="util" />
       <recent name="service" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="util" />
-      <recent name="exeption" />
-      <recent name="validator" />
-      <recent name="dao" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\HyperX\.IntelliJIdea2016.2\carServiceStation\src\main\webapp" />
+      <recent name="$PROJECT_DIR$/src/main/gwt/carService" />
+      <recent name="$PROJECT_DIR$/src/main/webapp" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages" />
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.1Test">
@@ -2234,7 +2272,7 @@
     </configuration>
     <configuration default="false" name="1Test" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.0.M9" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="C:\Program Files\Java\jdk1.8.0_101\jre">
       <option name="OPEN_IN_BROWSER_URL" value="http://127.0.0.1:8080/carServiceStation" />
-      <option name="UPDATING_POLICY" value="restart-server" />
+      <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
       <deployment>
         <artifact name="stationCarTokar:war exploded">
           <settings>
@@ -2430,7 +2468,20 @@
       <workItem from="1470085549910" duration="848000" />
       <workItem from="1470249189316" duration="61000" />
       <workItem from="1470249312520" duration="1816000" />
-      <workItem from="1470758550280" duration="6295000" />
+      <workItem from="1470758550280" duration="9971000" />
+      <workItem from="1470775917503" duration="2079000" />
+      <workItem from="1472294578244" duration="51000" />
+      <workItem from="1472294692215" duration="16864000" />
+      <workItem from="1472378126027" duration="14874000" />
+      <workItem from="1472582057914" duration="9693000" />
+      <workItem from="1472593254912" duration="3472000" />
+      <workItem from="1472622454061" duration="199000" />
+      <workItem from="1472666386608" duration="10000" />
+      <workItem from="1472666447502" duration="8200000" />
+      <workItem from="1472745774891" duration="2615000" />
+      <workItem from="1472943329241" duration="709000" />
+      <workItem from="1472988699188" duration="21133000" />
+      <workItem from="1473272219778" duration="8789000" />
     </task>
     <servers />
   </component>
@@ -2467,7 +2518,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="535803000" />
+    <option name="totallyTimeSpent" value="628167000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -2484,35 +2535,35 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32832617" sideWeight="0.49466383" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32725322" sideWeight="0.49358425" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32664436" sideWeight="0.4914712" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32887402" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40987125" sideWeight="0.5064034" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32664436" sideWeight="0.50852877" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3277592" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0826226" sideWeight="0.49557522" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.50501674" sideWeight="0.46264675" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32887402" sideWeight="0.48612595" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3322185" sideWeight="0.46264675" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32887402" sideWeight="0.48612595" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32887402" sideWeight="0.49187338" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24860647" sideWeight="0.49786553" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22121535" sideWeight="0.3936877" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22121535" sideWeight="0.6063123" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21321961" sideWeight="0.6063123" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22121535" sideWeight="0.42105263" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934132" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24946696" sideWeight="0.4944" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2497332" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.48049054" sideWeight="0.49359658" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977587" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.48049054" sideWeight="0.4914712" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977587" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35485592" sideWeight="0.50442475" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32832617" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3277592" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -2535,8 +2586,14 @@
           <properties />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/servlets/servicecForClientsServlets/UpdateServiceForClient.java</url>
+          <line>113</line>
+          <properties />
+          <option name="timeStamp" value="51" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="40" />
+      <option name="time" value="53" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -2545,227 +2602,248 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/WorkerTypes.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/temp/log.txt" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/servlets/clientsServlets/RegisterController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
+        <state relative-caret-position="272">
+          <caret line="46" column="39" selection-start-line="46" selection-start-column="39" selection-end-line="46" selection-end-column="39" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/ServiceForClientServ.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="27" column="88" selection-start-line="27" selection-start-column="88" selection-end-line="27" selection-end-column="88" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/ClientServImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1410">
-          <caret line="105" column="8" selection-start-line="105" selection-start-column="8" selection-end-line="105" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/ClientServ.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/ServiceForClientServImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="36" column="3" selection-start-line="36" selection-start-column="3" selection-end-line="36" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/WorkerServ.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="36" column="3" selection-start-line="36" selection-start-column="3" selection-end-line="36" selection-end-column="3" />
+        <state relative-caret-position="170">
+          <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/service/WorkServImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="149" column="2" selection-start-line="149" selection-start-column="2" selection-end-line="149" selection-end-column="2" />
+        <state relative-caret-position="-1257">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/servlets/clientsServlets/DeleteController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/ClientServImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="45" column="6" selection-start-line="45" selection-start-column="6" selection-end-line="45" selection-end-column="6" />
+        <state relative-caret-position="-1547">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/servlets/clientsServlets/UpdateController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/servlets/servicecForClientsServlets/FindSFCbyID.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        <state relative-caret-position="85">
+          <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/servlets/servicecForClientsServlets/AddServiceForClientController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/ClientDaoJPAImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1040">
-          <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+        <state relative-caret-position="1445">
+          <caret line="95" column="60" selection-start-line="95" selection-start-column="8" selection-end-line="95" selection-end-column="60" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/servlets/workerServlets/LoginController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/ServiceForClientDaoJPAImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+        <state relative-caret-position="85">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/servlets/workerServlets/RegisterController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/util/GetEnumFromString.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/util/StringUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/workerMenu.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/loginForWorker.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/gwt/carService/carServiceStation.gwt.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-561">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/workerCabinet.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/clientMenu.jsp">
+    <entry file="jar://$PROJECT_DIR$/lib/javax.servlet.jar!/javax/servlet/http/HttpServletRequest.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/util/WebElementsActions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-795">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/validator/Validator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pages/Page.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-323">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/testng.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="255">
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/tests/Fixture.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="17" column="33" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
+        <state relative-caret-position="153">
+          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pages/CarServStation.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/log4j/log4j/1.2.17/log4j-1.2.17-sources.jar!/org/apache/log4j/Category.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="66" selection-start-line="15" selection-start-column="66" selection-end-line="15" selection-end-column="66" />
+        <state relative-caret-position="214">
+          <caret line="666" column="0" selection-start-line="666" selection-start-column="0" selection-end-line="666" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pages/MainPage.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/workerMenu.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="48" column="52" selection-start-line="48" selection-start-column="52" selection-end-line="48" selection-end-column="52" />
+        <state relative-caret-position="374">
+          <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/util/ConfigData.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/deleter.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/util/ClassNameUtil.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/showServices.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/util/GridInitialization.java">
+    <entry file="jar://$PROJECT_DIR$/lib/javax.servlet.jar!/javax/servlet/ServletResponse.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        <state relative-caret-position="146">
+          <caret line="25" column="14" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/util/WebDriverWrapper.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/clientMenu.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        <state relative-caret-position="-472">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/UIMapping.properties">
+    <entry file="file://$PROJECT_DIR$/src/main/java/servlets/clientsServlets/DeleteController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="53" selection-start-line="19" selection-start-column="53" selection-end-line="19" selection-end-column="53" />
+        <state relative-caret-position="85">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pages/ClientLoginPage.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/servlets/clientsServlets/UpdateController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="19" column="43" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="43" />
+        <state relative-caret-position="51">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/servlets/clientsServlets/LoginController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/createService.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
-          <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/updater.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/dateTimePeacker/js/bootstrap-datetimepicker.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/dateTimePeacker/images/ui-icons_444444_256x240.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/dateTimePeacker/images/ui-icons_777620_256x240.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/dateTimePeacker/images/ui-icons_555555_256x240.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/dateTimePeacker/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-742">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/dateTimePeacker/css/bootstrap-datetimepicker.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/dateTimePeacker/css/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-25500">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/dateTimePeacker/js/bootstrap-datetimepicker.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="1388" column="2" selection-start-line="1388" selection-start-column="2" selection-end-line="1388" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/newAddService.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="94" column="71" selection-start-line="93" selection-start-column="16" selection-end-line="94" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/index3.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1071">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/addServiceForClient.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/servlets/workerServlets/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2773,138 +2851,129 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/tests/indexPageTests/LoginTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/tests/indexPageTests/SignUpTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="809">
-          <caret line="114" column="69" selection-start-line="114" selection-start-column="69" selection-end-line="114" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pages/SignUpClientPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="57" column="52" selection-start-line="57" selection-start-column="52" selection-end-line="57" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/util/PropertyLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="108" selection-start-line="22" selection-start-column="108" selection-end-line="22" selection-end-column="108" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/filter/SessionFilterClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/util/ConnectionFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-368">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="14" column="38" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/util/WebDriverFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="48" column="7" selection-start-line="48" selection-start-column="7" selection-end-line="48" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/listener/SpringContextInitListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/temp/log.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/db.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/app-context.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="59" selection-start-line="22" selection-start-column="59" selection-end-line="22" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/servlets/clientsServlets/RegisterController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="46" column="39" selection-start-line="46" selection-start-column="39" selection-end-line="46" selection-end-column="39" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/register.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
+        <state relative-caret-position="-772">
           <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/registerForWorker.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/StoreGoodsTypes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="54" selection-start-line="3" selection-start-column="45" selection-end-line="3" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/ServiceTypes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="136" selection-start-line="6" selection-start-column="115" selection-end-line="6" selection-end-column="136" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/ServiceForClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-449">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/ServiceForClientServ.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="30" column="113" selection-start-line="30" selection-start-column="113" selection-end-line="30" selection-end-column="113" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/ServiceForClientServImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2019">
+          <caret line="151" column="0" selection-start-line="151" selection-start-column="0" selection-end-line="151" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/temp/log.out">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-102">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/servlets/workerServlets/RegisterController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/registerWorker.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/javax.servlet.jar!/javax/servlet/http/HttpServlet.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="59" column="19" selection-start-line="59" selection-start-column="19" selection-end-line="59" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/servlets/servicecForClientsServlets/AddServiceForClientController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="58" column="51" selection-start-line="58" selection-start-column="8" selection-end-line="58" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/addSFC.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="64" column="35" selection-start-line="64" selection-start-column="35" selection-end-line="64" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/updateSFC.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="87" column="0" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/servlets/servicecForClientsServlets/UpdateServiceForClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="545">
+          <caret line="113" column="0" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
