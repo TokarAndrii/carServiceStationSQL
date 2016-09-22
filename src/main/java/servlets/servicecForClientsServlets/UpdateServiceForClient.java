@@ -102,14 +102,8 @@ public class UpdateServiceForClient extends HttpServlet {
         long newPrice = 0;
         Worker newWorker = null;
         long newIDWorker = 0;
+        long idSFCtoBeUpdated = 0;
 
-
-       /* String idFound = req.getParameter("idSFC");
-
-        long IDCFC = Long.parseLong(String.valueOf(idFound));
-        LOGGER.info("Long of IDSFC converted from string is: " + IDCFC);
-
-        ServiceForClient found = serviceForClientServ.findById(IDCFC);*/
 
         ServiceForClient found = serviceForClientFound;
 
@@ -212,8 +206,12 @@ public class UpdateServiceForClient extends HttpServlet {
             newWorker = foundWorker;
         }
 
-        serviceForClientServ.updateServiceForClient(newServiceTypes, newStoreGoodsTypes, newStartDate,
+        idSFCtoBeUpdated = Long.parseLong(req.getParameter("idSFC"));
+
+        ServiceForClient serviceForClient = serviceForClientServ.updateServiceForClient(idSFCtoBeUpdated, newServiceTypes, newStoreGoodsTypes, newStartDate,
                 newFinishDate, newPrice, newWorker);
+        req.setAttribute("serviceForClient", serviceForClient);
+        req.getRequestDispatcher("workerCabinet.jsp").forward(req, resp);
 
         printWriter.flush();
 

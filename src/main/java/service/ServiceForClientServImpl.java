@@ -144,8 +144,12 @@ public class ServiceForClientServImpl implements ServiceForClientServ {
     }
 
     @Override
-    public ServiceForClient updateServiceForClient(ServiceTypes serviceTypes, StoreGoodsTypes storeGoodsTypes,
-                                                   Date startDate, Date finishDate, long priceOfService, Worker worker) {
-        return null;
+    public ServiceForClient updateServiceForClient(long idSFCtoBeUpdated, ServiceTypes serviceTypes, StoreGoodsTypes storeGoodsTypes,
+                                                   Date startDate, Date finishDate, long priceOfService, Worker newWorker) {
+
+        return  serviceForClientDaoJPA.update(idSFCtoBeUpdated, serviceTypes, storeGoodsTypes, startDate, finishDate, priceOfService, newWorker);
+
+
+
     }
 }

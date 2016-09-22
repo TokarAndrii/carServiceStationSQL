@@ -1,12 +1,10 @@
 package dao;
 
 import exeption.NoServiceTypeFoundException;
-import model.Client;
-import model.ServiceForClient;
-import model.StoreGoodsTypes;
-import model.Worker;
+import model.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import service.ServiceForClientServImpl;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -15,9 +13,12 @@ import javax.persistence.Query;
 import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.logging.Logger;
 
 @Component("serviceForClientDaoJPA")
 public class ServiceForClientDaoJPAImpl implements ServiceForClientDao {
+
+    private static final org.apache.log4j.Logger LOGGER = org.apache.log4j.Logger.getLogger(ServiceForClientDaoJPAImpl.class);
 
     @Autowired
     private EntityManagerFactory factory;
@@ -37,12 +38,11 @@ public class ServiceForClientDaoJPAImpl implements ServiceForClientDao {
         EntityTransaction transaction = manager.getTransaction();
 
         long clientId = client.getId();
-        Client client2=manager.find(Client.class, clientId);
-
+        Client client2 = manager.find(Client.class, clientId);
 
 
         long workerId = worker.getId();
-        Worker worker2=manager.find(Worker.class,workerId);
+        Worker worker2 = manager.find(Worker.class, workerId);
 
         List<ServiceForClient> serviceForClients = new LinkedList<>();
         serviceForClients.add(serviceForClient);
@@ -62,9 +62,6 @@ public class ServiceForClientDaoJPAImpl implements ServiceForClientDao {
 
         serviceForClient.setWorker(worker2);
         serviceForClient.setClient(client2);
-
-
-
 
 
         try {
@@ -163,5 +160,66 @@ public class ServiceForClientDaoJPAImpl implements ServiceForClientDao {
         return null;
     }
 
+    @Override
+    public ServiceForClient update(long idSFCtoBeUpdated, ServiceTypes serviceTypes, StoreGoodsTypes storeGoodsTypes, Date startDate,
+                          Date finishDate, long priceOfService, Worker newWorker) {
+        EntityManager entityManager = factory.createEntityManager();
+        EntityTransaction transaction = entityManager.getTransaction();
+        ServiceForClient serviceForClientFound = null;
 
+        try {
+            serviceForClientFound = findByID(idSFCtoBeUpdated);
+        } catch (NoServiceTypeFoundException e) {
+            e.printStackTrace();
+
+            if (serviceTypes != null) {
+
+                if (!serviceTypes.equals(serviceForClientFound.getServiceTypes()))
+                    serviceForClientFound.setServiceTypes(serviceTypes);
+                LOGGER.info("new service for client type is:" + serviceForClientFound.getStoreGoodsTypes().toString());
+
+            } else if (storeGoodsTypes != null) {
+                if (!storeGoodsTypes.equals(serviceForClientFound.getStoreGoodsTypes()))
+                    serviceForClientFound.setStoreGoodsTypes(storeGoodsTypes);
+                LOGGER.info("new store good type is:" + serviceForClientFound.getStoreGoodsTypes().toString());
+            } else if (startDate != null) {
+                if (startDate != serviceForClientFound.getStartDate()) {
+                    serviceForClientFound.setStartDate(startDate);
+                    LOGGER.info("new start date of SFC is:" + startDate);
+                }
+            } else if (finishDate != null) {
+                if (finishDate != serviceForClientFound.getFinishDate()) {
+                    serviceForClientFound.setFinishDate(finishDate);
+                    LOGGER.info("new finish date is:" + finishDate);
+                }
+            } else if (priceOfService != 0) {
+                if (priceOfService != serviceForClientFound.getPriceOfService()) {
+                    serviceForClientFound.setPriceOfService(priceOfService);
+                    LOGGER.info("new price of service is:" + serviceForClientFound.getPriceOfService());
+                }
+            } else if (newWorker != null) {
+                if (newWorker.getId() != serviceForClientFound.getWorker().getId()) {
+                    serviceForClientFound.setWorker(newWorker);
+                    LOGGER.info("new Workers responsible for service is" + serviceForClientFound.getWorker().toString());
+                }
+
+            }
+
+            try {
+                transaction.begin();
+                entityManager.merge(serviceForClientFound);
+                transaction.commit();
+                LOGGER.info("service for client was updated to" + serviceForClientFound.toString());
+                return serviceForClientFound;
+            } catch (Exception e1) {
+                e1.printStackTrace();
+                transaction.rollback();
+                LOGGER.info("transaction was rollback, updated was failed!!!");
+            }
+
+        }
+
+        LOGGER.info("updated was failed!!!");
+        return null;
+    }
 }
