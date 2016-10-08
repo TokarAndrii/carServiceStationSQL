@@ -18,7 +18,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 @Component
 public class WorkServImpl implements WorkerServ {
-    private static final Logger LOGGER = Logger.getLogger(ClientServImpl.class);
+    private static final Logger LOGGER = Logger.getLogger(WorkServImpl.class);
 
     private Map<String, Worker> accessTokenMap = new ConcurrentHashMap<>();
 

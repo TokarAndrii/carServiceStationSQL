@@ -16,6 +16,38 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
+
+    <style type="text/css">
+        #loginInput,#passInput{
+            max-width: 400px;
+        }
+        #containerForm{
+            width: 1000px;
+            padding: 5px;
+        }
+        #loginLabel, #passLabel{
+            width:120px;
+            padding: 10px;
+        }
+
+        .form-group{
+            width: 1000px;
+        }
+
+        #loginClientForm{
+            padding-left: 20px;
+
+            font-weight: bold;
+        }
+
+        #tokar_container_header{
+            padding: 10px;
+        }
+
+
+    </style>
+
+
 </head>
 
 
@@ -32,30 +64,30 @@
 <br>
 <br>
 
-<div class="login form">
+<div class="login form" id="containerForm">
 
     <form class="form-horizontal" action="loginForWorker" method="post">
         <div class="form-group">
-            <label class="control-label col-sm-2">Login:</label>
+            <label id="loginLabel" class="control-label col-sm-2">Login:</label>
 
             <div class="col-sm-10">
-                <input class="form-control" name="login" type="text" placeholder="Enter Login" required>
+                <input id="loginInput" class="form-control" name="login" type="text" placeholder="Enter Login" required>
 
             </div>
         </div>
 
 
         <div class="form-group">
-            <label class="control-label col-sm-2">Pass:</label>
+            <label id="passLabel" class="control-label col-sm-2">Pass:</label>
 
             <div class="col-sm-10">
-                <input class="form-control" name="pass" type="password" placeholder="Enter password" required>
+                <input id="passInput" class="form-control" name="pass" type="password" placeholder="Enter password" required>
             </div>
         </div>
 
-        <div class="form-group">
-            <div class="col-sm-offset-2 col-sm-10">
-                <button type="submit" class="btn btn-default">Submit</button>
+        <div id="submitButton" class="form-group">
+            <div id="divSubmit" class="col-sm-offset-2 col-sm-10">
+                <button id="buttonSbM" type="submit" class="btn btn-default">Submit</button>
             </div>
         </div>
 

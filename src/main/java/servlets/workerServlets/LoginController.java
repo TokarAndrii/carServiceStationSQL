@@ -10,6 +10,7 @@ import util.GetEnumFromString;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -44,6 +45,9 @@ public class LoginController extends HttpServlet {
         Worker worker = workerServ.getWorker(accessToken);
         LOGGER.info("worker login controller: " + worker.toString() + " in system!");
 
+        resp.addCookie(new Cookie("accessToken", accessToken));
+        req.setAttribute("worker", worker);
+
         if(worker.getWorkerTypes()==WorkerTypes.ADMINISTRATOR){
             req.getRequestDispatcher("/WEB-INF/pages/administratorMenu.jsp").forward(req, resp);
         }
@@ -51,6 +55,15 @@ public class LoginController extends HttpServlet {
             req.getRequestDispatcher("/WEB-INF/pages/workerMenu.jsp").forward(req,resp);
         }
         printWriter.flush();
+
+
+    }
+
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+
+        req.getRequestDispatcher("/WEB-INF/pages/workerMenu.jsp").forward(req,resp);
 
 
     }
