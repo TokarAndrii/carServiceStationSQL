@@ -123,7 +123,7 @@ public class AddServiceForClientController extends HttpServlet {
             LOGGER.info(serviceTypes.toString() + " -->> service types from doPost in AddServiceForClientController!!!");
 
             String date1 = req.getParameter("startDate");
-            DateFormat dateFormat1 = new SimpleDateFormat("dd mm yyyy hh:mm");
+            DateFormat dateFormat1 = new SimpleDateFormat("dd mm yyyy  hh:mm");
             try {
                 startDate = dateFormat1.parse(date1);
                 LOGGER.info(startDate + " start date ->> info: AddServiceForClientController");
@@ -133,7 +133,7 @@ public class AddServiceForClientController extends HttpServlet {
 
 
             String date2 = req.getParameter("finishDate");
-            DateFormat dateFormat2 = new SimpleDateFormat("dd mm yyyy hh:mm");
+            DateFormat dateFormat2 = new SimpleDateFormat("dd mm yyyy  hh:mm");
             try {
                 finishDate = dateFormat1.parse(date2);
                 LOGGER.info(finishDate + " finish date ->> info: AddServiceForClientController");
